@@ -21,11 +21,13 @@ body {
 .logo {
     width: 64px;
     height: 64px;
+    margin-left: 110px;
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
+    margin-right: 110px;
 }
 .nav a {
     color: white;
