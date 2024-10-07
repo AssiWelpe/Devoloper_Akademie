@@ -1,0 +1,91 @@
+html {
+    scroll-behavior: smooth;
+}
+.mybody {
+    margin: 0px;
+    font-family: "Kay Pho Du", serif;
+}
+.atf-image {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+}
+.pacifico {
+    font-family: "Pacifico", cursive;
+}
+
+.main-container {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 800px;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headline {
+    font-size: 54px;
+    color: blanchedalmond;
+}
+
+.menu {
+    position: absolute;
+    top: 24px;
+    right: 100px;
+}
+
+.menu a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 32px;
+    
+}
+
+  .menu a:hover {
+     color: blanchedalmond;
+  }
+
+.container {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 64px;
+}
+
+.button {
+    background-color: blanchedalmond;
+    color: black !important;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: rgb(255, 255, 255, 0.8);
+    color: black !important;
+}
+
+.footer {
+    background-color: rgb(35, 38, 41);
+    color: antiquewhite;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.footer-link {
+    color: aliceblue;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-link:hover {
+    color: rgba(240, 248, 255, 0.582);
+    text-decoration: none;
+}

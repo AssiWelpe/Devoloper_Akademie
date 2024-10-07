@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+}
+
+.hero {
+    background-image: url(assets/img/1_hero/JPG/hero_bg.jpg);
+    height: 100vh;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 112px;
+    width: 100%;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    margin-left: 160px;
+    
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 160px;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-family: "Raleway", system-ui;
+    font-size: 24px;
+    margin-left: 24px;
+}
+
+.button_tel {
+    background-color: #9F0908;
+    padding: 8px 19px;
+    border-radius: 8px;
+    border: solid white;
+}
+
+.icon_phone {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 24px; 
+    height: 24px;
+}
+    
+.hero_top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title_top {
+    font-family:  "Raleway", system-ui;
+    font-weight: bold;
+    font-size: 96px;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 98px;
+
+}
+.subtitle {
+    font-family:  "Raleway", system-ui;
+    font-size: 24px;
+    color: white;
+}
+
+.how_to_order {
+    margin-top: 120px;
+    font-family: Raleway, system-ui;
+    font-size: 80px;
+    font-weight: bold;
+    color: #9F0908;
+    display: flex;
+    justify-content: center;
+}
+
+.style_text_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.margin_left {
+    margin-left: 160px;
+}
+.margin_right {
+    margin-right: 160px;
+}
+
+.img_style {
+    width: 124px;
+    height: 124px;
+    margin-bottom: 16px;
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+.text_style {
+    font-size: 56px;
+    font-family: Economica, system-ui ;
+    text-align: center;
+    margin-top: 0;
+}
+
+.our_menu {
+    font-family: Raleway, system-ui;
+    font-size: 80px;
+    font-weight: bold;
+    color: #9F0908;
+    margin-top: 240px;
+    display: flex;
+    justify-content: center;
+    background-image: url("assets/img/3_section_our_menu/JPG/section_our_menu_bg.jpg");
+}
