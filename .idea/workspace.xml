@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5d289c9-122f-4947-bd5a-ba31323a74c9" name="Changes" comment="menu test1 but don't work (html , css)&#10;add meta for &quot;viewport&quot;">
+    <list default="true" id="c5d289c9-122f-4947-bd5a-ba31323a74c9" name="Changes" comment="rm margin for logo and nav">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sakura Ramen Webseite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sakura Ramen Webseite/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sakura Ramen Webseite/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Sakura Ramen Webseite/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +15,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -47,7 +47,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Debug&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Coverage&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -56,7 +56,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -83,10 +83,6 @@
       <workItem from="1728340797423" duration="2265000" />
       <workItem from="1728408314671" duration="3414000" />
       <workItem from="1728417217468" duration="6622000" />
-      <workItem from="1728424579379" duration="1632000" />
-      <workItem from="1728426362624" duration="74000" />
-      <workItem from="1728494466516" duration="3008000" />
-      <workItem from="1728497878291" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -104,23 +100,7 @@
       <option name="project" value="LOCAL" />
       <updated>1728344730195</updated>
     </task>
-    <task id="LOCAL-00003" summary="menu test1 but don't work (html , css)&#10;add meta for &quot;viewport&quot;">
-      <option name="closed" value="true" />
-      <created>1728426062525</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1728426062525</updated>
-    </task>
-    <task id="LOCAL-00004" summary="menu test1 but don't work (html , css)&#10;add meta for &quot;viewport&quot;">
-      <option name="closed" value="true" />
-      <created>1728426159465</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1728426159465</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,8 +124,6 @@
     </ignored-roots>
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="rm margin for logo and nav" />
-    <MESSAGE value="menu test1 but don't work (html , css),&#10;add meta for &quot;viewport&quot;" />
-    <MESSAGE value="menu test1 but don't work (html , css)&#10;add meta for &quot;viewport&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu test1 but don't work (html , css)&#10;add meta for &quot;viewport&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="rm margin for logo and nav" />
   </component>
 </project>

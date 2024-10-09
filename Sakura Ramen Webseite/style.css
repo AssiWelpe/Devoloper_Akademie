@@ -133,17 +133,31 @@ body {
 
 .menu_1 {
     margin-top: 64px;
-    padding-left: 160px;
-    display: flex;
-    flex-direction: row;
+    margin-left: 160px;
 }
 
 .img_menu_1 img {
     height: 352px;
     width: 352px;
+    float: left;
+    padding-left: 80px;
 }
 
 .menu_1_list {
-    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
 }
 
+.menu_1_list tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu_1_list h2 {
+    margin-left: 80px;
+    font-family: Economica, system-ui;
+    font-weight: bold;
+    font-size: 56px;
+}
