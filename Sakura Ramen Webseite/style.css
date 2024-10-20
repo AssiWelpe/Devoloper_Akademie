@@ -156,6 +156,11 @@ body {
     margin-right: 160px;
 }
 
+.menu img{
+    width: 352px;
+    height: 352px;
+}
+
 .menu:nth-child(odd) > img {
     float: left;
     padding-left: 80px;
