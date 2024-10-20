@@ -135,6 +135,8 @@ body {
     padding-bottom: 120px;
     background-image: url("assets/img/3_section_our_menu/JPG/section_our_menu_bg.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 }
 
 .menu-title {
