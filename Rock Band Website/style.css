@@ -1,60 +1,67 @@
 body {
     margin: 0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif, system-ui;
     color: white;
 }
 
 .aot {
-    background-image: url("img/header.png");
-    background-repeat: no-repeat;
+    background-image: url('./img/header.png');
+    height: 100vh;
     background-size: cover;
     background-position: center;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 16px;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    padding: 16px;
 }
 
 header img {
     width: 100px;
 }
 
-.nav-link {
-    text-decoration: none;
+.navLink {
     color: white;
+    text-decoration: none;
     margin-left: 16px;
+;
 }
 
-.nav-link:hover {
+.mt-16 {
+    margin-top: 16px;
+}
+
+.navLink:hover {
     color: #B48A4E;
 }
 
-.nav-image {
+.navImage {
     height: 24px;
     width: auto;
     margin-left: 16px;
 }
 
-.nav-image:hover {
+.navImage:hover {
     cursor: pointer;
-    filter: drop-shadow(0px 0px 4px #B48A4E);
+    filter: drop-shadow(0px 0px 4px #FFFFFF);
 }
 
 h1 {
     font-size: 84px;
-    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-family: 'Viga', system-ui;
+    font-weight: 100;
 }
 
 .button {
@@ -64,10 +71,6 @@ h1 {
     padding: 16px;
 }
 
-.mt-16 {
-    margin-top: 16px;
-}
-
 .section-quicklinks {
     background-color: black;
     padding: 80px 80px;
@@ -75,17 +78,17 @@ h1 {
     justify-content: space-between;
 }
 
-.quicklink {
-    display: flex;
-    flex-direction: column;
+.quickLink {
     color: #B48A4E;
     text-decoration: none;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
-    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.quicklink img {
+.quickLink img {
     width: 200px;
     height: 200px;
 }
@@ -102,7 +105,7 @@ h1 {
 
 .festival-info {
     padding: 40px;
-    height: 280px;
+    height: 200px;
     flex: 1;
 }
 
@@ -121,5 +124,67 @@ h1 {
     width: 300px;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.slogan-section {
+    padding: 80px 80px;
+    color: #B48A4E;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.video-section {
+    background-image: url('./img/bottom.png');
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    display: flex;
+    background-color: #000000;
+    padding: 80px 80px;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.footer-social-media-icon {
+    width: 32px;
+}
+
+.footer-left{
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: flex-end;
+    padding-right: 16px;
+}
+
+.footer-center {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 16px;
+}
+
+input {
+    height: 41px;
+    flex: 1;
+}
+
+input::placeholder{
+    color: rgba(0,0,0,0.4);
+    padding-left: 16px;
+}
+
+.button-footer {
+    width: 200px;
+    border-width: 0;
+}
+
+.footer-form {
+    display: flex;
 }
