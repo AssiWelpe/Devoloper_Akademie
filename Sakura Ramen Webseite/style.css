@@ -331,8 +331,10 @@ footer {
         margin-right: 24px;
     }
 
-    .img_style {
-        width: 112px;
+    .menu img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .order-option-left {
@@ -344,6 +346,7 @@ footer {
     }
 
     .img_style {
+        width: 112px;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -536,6 +539,7 @@ footer {
 
     .menu_item h3 {
         font-size: 32px;
+        text-align: center;
     }
 
     .find-us-title {
