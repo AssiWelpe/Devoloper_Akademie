@@ -436,6 +436,42 @@ footer {
     }
 }
 
+@media (max-width: 762px) {
+
+    .menu:nth-child(odd) > img {
+        float: unset;
+        padding-left: 0;
+    }
+
+    .menu:nth-child(even) > img {
+        float: unset;
+        padding-right: 0;
+    }
+    .menu:nth-child(odd) > .menu_item {
+        float: unset;
+        margin-left: 0;
+    }
+    .menu:nth-child(even) > .menu_item {
+        float: unset;
+        margin-right: 0;
+    }
+
+    .menu_item h3 {
+        text-align: center;
+    }
+
+    .menu_item {
+        min-width: min(100%, 500px);
+        text-align: left;
+        justify-content: unset;
+        margin-top: 24px;
+        height: unset;
+    }
+
+
+
+}
+
 @media (max-width: 550px) {
     .navbar {
         height: 64px;
@@ -494,23 +530,7 @@ footer {
         margin-bottom: 40px;
     }
 
-    .menu:nth-child(odd) > img {
-        float: unset;
-        padding-left: 0;
-    }
 
-    .menu:nth-child(even) > img {
-        float: unset;
-        padding-right: 0;
-    }
-    .menu:nth-child(odd) > .menu_item {
-        float: unset;
-        margin-left: 0;
-    }
-    .menu:nth-child(even) > .menu_item {
-        float: unset;
-        margin-right: 0;
-    }
 
     .menu-container {
         gap: 32px;
@@ -529,13 +549,7 @@ footer {
         width: min(100%, 352px)
     }
 
-    .menu_item {
-        min-width: min(100%, 500px);
-        text-align: left;
-        justify-content: unset;
-        margin-top: 24px;
-        height: unset;
-    }
+
 
     .menu_item h3 {
         font-size: 32px;
