@@ -284,7 +284,7 @@ footer {
 
 }
 
-@media (max-width: 770px) {
+@media (max-width: 850px) {
     .navbar {
         margin-top: 24px;
         height: 112px;
@@ -296,6 +296,7 @@ footer {
 
     .nav {
         margin-right: 24px;
+        display:unset;
     }
 
     .nav a:not(:last-child) {
@@ -432,7 +433,7 @@ footer {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 550px) {
     .navbar {
         height: 64px;
         margin-top: 16px;
