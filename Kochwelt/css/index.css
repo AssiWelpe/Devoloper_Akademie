@@ -26,8 +26,7 @@ display: flex;
 } 
 
 .logo-head {
-    width: 150px;
-    height: 50px;
+    margin-top: 2em;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -51,13 +50,12 @@ display: flex;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
-   
-    
+    width: 100%;
+    margin-left: 180px;
+    margin-right:180px; 
 }
 
 .nav-links {
-
     display: flex;
     gap: 30px; 
     padding-top: 48px;
@@ -73,6 +71,7 @@ display: flex;
 
 .nav-links a:hover {
     color: #666;
+    text-decoration: underline;
 }
 
 
@@ -82,21 +81,25 @@ display: flex;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 90%;
     background-color: #fff;
     overflow: hidden;
+    padding-top: 4em;
+    margin-left: 180px; 
+}
+
+.recipe-section img {
+    width: 480px;
+    border-radius: 8px;
 }
 
 
-
 .recipe-content {
-    flex: 2;
-    padding: 20px;
+    margin-left: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    float: right;
+    height: 320px;
+    margin-right: 180px;
 }
 
 .recipe-title {
@@ -117,7 +120,7 @@ display: flex;
     background-color: #28a745;
     color: #fff;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 5px;
     text-align: center;
     width: fit-content;
@@ -125,4 +128,102 @@ display: flex;
 
 .recipe-button:hover {
     background-color: #218838;
+}
+
+/* section-3 */
+
+.section3 h2 {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.menu-section {
+    margin-left: 180px;
+    margin-right:180px; 
+    margin-top: 4em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.menu {
+    display: flex;  
+    flex-direction: column;
+}
+
+.menu-section img {
+    width: 260px;
+}
+
+.menu-text {
+    text-align: center;
+    font-size: 19px;
+    font-weight: 540;
+}
+
+
+
+
+
+
+
+
+
+
+/* Styling Footer */
+a {
+    padding-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.navfooter {
+    gap: 25px;
+
+}
+
+.navfooter a:hover {
+    text-decoration: none;
+    filter: drop-shadow(0px 0px 10px #0e0d0d);
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+
+    font-family: "Raleway";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #403B3B;
+}
+
+.footerlogo {
+
+    width: 180px;
+    height: 60px;
+    margin-left: 180px;
+}
+
+.footer_social_icons {
+    width: 40px;
+    height: 40px;
+
+}
+
+.footerlinks { 
+    font-weight: 600;
+}
+
+.footersocials {
+    margin-right: 180px;
+
 }
