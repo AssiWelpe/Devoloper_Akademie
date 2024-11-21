@@ -74,3 +74,55 @@ display: flex;
 .nav-links a:hover {
     color: #666;
 }
+
+
+/* section 2 */
+
+.recipe-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 90%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+
+
+.recipe-content {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.recipe-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.recipe-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.recipe-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+}
+
+.recipe-button:hover {
+    background-color: #218838;
+}
