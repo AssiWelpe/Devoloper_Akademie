@@ -144,6 +144,8 @@ display: flex;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+
+    margin-bottom: 80px;
 }
 
 .menu {
@@ -195,8 +197,6 @@ a:hover {
 
 footer {
     width: 100%;
-    position: fixed;
-    bottom: 0;
 
 
     font-family: "Raleway";
