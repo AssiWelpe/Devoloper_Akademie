@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,26 +14,26 @@ html {
 }
 
 .raleway {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 
 .main-head {
-display: flex;
+    display: flex;
 
-} 
+}
 
 .logo-head {
-    margin-top: 2em;
+    margin-top: 1em;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 /* Header Styling */
-.header {
+header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +43,7 @@ display: flex;
     position: sticky;
     top: 0;
     z-index: 1000;
-   
+
 }
 
 .main-head {
@@ -52,43 +52,49 @@ display: flex;
     align-items: center;
     width: 100%;
     margin-left: 180px;
-    margin-right:180px; 
+    margin-right: 180px;
 }
 
-.nav-links {
+nav {
     display: flex;
-    gap: 30px; 
+    gap: 30px;
     padding-top: 75px;
     font-weight: 600;
     font-size: 16px;
 }
 
-.nav-links a {
+nav a {
     text-decoration: none;
     color: #333;
     position: relative;
 }
 
-.nav-links a:hover {
+nav a:hover {
     color: #666;
     text-decoration: none;
 }
 
 /* nav-links transition */
-.nav-links a::after {
+nav a::after {
     content: "";
     position: absolute;
     left: 50%;
     bottom: 0px;
-    width: 0;                       /* Startpunkt: Keine Breite */
-    height: 3px;                    /* Startpunkt: Dicke der Linie */
-    background-color: green;      /* Farbe der Linie */
-    transition: width 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Korrektur */
-    transform: translateX(-50%);    /* sorgt dafür, dass die Linie mittig ist */
+    width: 0;
+    /* Startpunkt: Keine Breite */
+    height: 3px;
+    /* Startpunkt: Dicke der Linie */
+    background-color: green;
+    /* Farbe der Linie */
+    transition: width 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Korrektur */
+    transform: translateX(-50%);
+    /* sorgt dafür, dass die Linie mittig ist */
 }
 
-.nav-links a:hover::after {
-    width: 100%;                    /* Linie füllt sich bei Hover */
+nav a:hover::after {
+    width: 100%;
+    /* Linie füllt sich bei Hover */
 }
 
 
@@ -102,7 +108,7 @@ display: flex;
     background-color: #fff;
     overflow: hidden;
     padding-top: 4em;
-    margin-left: 180px; 
+    margin-left: 180px;
 }
 
 .recipe-section img {
@@ -157,7 +163,7 @@ display: flex;
 
 .menu-section {
     margin-left: 180px;
-    margin-right:180px; 
+    margin-right: 180px;
     margin-top: 4em;
     display: flex;
     justify-content: space-between;
@@ -167,7 +173,7 @@ display: flex;
 }
 
 .menu {
-    display: flex;  
+    display: flex;
     flex-direction: column;
 }
 
@@ -193,15 +199,15 @@ display: flex;
 /* Styling Footer */
 
 
-.footer_buttons{
+.footer_buttons {
     color: white;
     text-decoration: none;
-    margin-left:  50px;
+    margin-left: 50px;
 }
 
-.footer_buttons:hover{
+.footer_buttons:hover {
     text-decoration: underline;
-    
+
 }
 
 
@@ -234,10 +240,9 @@ footer {
 
 }
 
-.footerlinks { 
+.footerlinks {
     font-weight: 600;
-    gap: 30px
-    ;
+    gap: 30px;
 
 }
 
@@ -245,7 +250,8 @@ footer {
     margin-right: 180px;
 
 }
-.sociallogo{
+
+.sociallogo {
     width: 40px;
     height: 40px;
     margin-left: 15px;
