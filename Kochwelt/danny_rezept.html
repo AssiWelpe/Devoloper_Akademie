@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kochwelt</title>
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="rezept_des_tages.css">
-    <link rel="stylesheet" href="ramon_rezept.css">
-    <link rel="stylesheet" href="impressum.css">
-    <link rel="stylesheet" href="kontakt.css">
     <script src="script.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Viga&display=swap"
@@ -18,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <style>
-        
         * {
             margin: 0;
             padding: 0;
@@ -29,7 +24,7 @@
             font-family: 'Raleway', sans-serif;
             background-color: #ffffff;
             color: #333;
-            padding: 20px;
+
         }
 
         .container {
@@ -42,12 +37,13 @@
             font-size: 28px;
             font-weight: 600;
             margin-bottom: 20px;
+            margin-top: 20px;
         }
 
         .recipe-image {
             width: 100%;
             height: 300px;
-            background-image: url('./img/salad.jpg'); 
+            background-image: url('./img/wintersalat.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 10px;
@@ -56,7 +52,6 @@
 
         .recipe-meta {
             display: flex;
-            justify-content: center;
             gap: 20px;
             margin-bottom: 20px;
         }
@@ -64,17 +59,23 @@
         .meta-item {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 26px;
             font-size: 16px;
-            font-weight: 600;
-            background-color: #f9f9f9;
-            padding: 5px 15px;
-            border-radius: 20px;
+            background-color: #EAEAEA;
+            padding: 10px 15px;
+            border-radius: 10px;
+            min-width: 150px;
+        }
+
+        .meta-icon {
+            width: 20px;
+            height: 20px;
+            background-image: url('./img/icon-clock.png');
+            background-position: center;
         }
 
         .portion-control {
             display: flex;
-            justify-content: center;
             align-items: center;
             margin-bottom: 20px;
             gap: 10px;
@@ -114,16 +115,102 @@
         }
 
         .ingredient-item {
-            background-color: #f9f9f9;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin-bottom: 10px;
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 5px;
+        }
+
+        .ingredient-item:nth-child(odd) {
+            background-color: #FFFFFF;
+            /*  Weißer Hintergrund für ungerade Zeilen */
+        }
+
+        .ingredient-item:nth-child(even) {
+            background-color: #EAEAEA;
+            /* Hellgrauer Hintergrund für gerade Zeilen */
         }
 
         .ingredient-quantity {
+            /* font-weight: 600; */
+            /* Fettschrift für die Mengenangabe */
+            margin-right: 10px;
+            /* Abstand zwischen Menge und Text */
+            color: #333;
+        }
+
+        .preparation-section {
+            margin-top: 20px;
+            width: 250px;
+
+        }
+
+        .meta-item-preparation {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            font-size: 16px;
+            background-color: #EAEAEA;
+            padding: 10px 15px;
+            border-radius: 10px;
+            min-width: 150px;
+        }
+
+        /* Styling Footer */
+        a {
+            padding-left: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .navfooter {
+            gap: 25px;
+
+        }
+
+        .navfooter a:hover {
+            text-decoration: none;
+            filter: drop-shadow(0px 0px 10px #0e0d0d);
+        }
+
+        footer {
+            width: 100%;
+            font-family: "Raleway";
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #403B3B;
+            margin-top: 80px;
+        }
+
+        .footerlogo {
+
+            width: 180px;
+            height: 60px;
+            margin-left: 180px;
+        }
+
+        .footer_social_icons {
+            width: 40px;
+            height: 40px;
+
+        }
+
+        .footerlinks {
             font-weight: 600;
+        }
+
+        .footersocials {
+            margin-right: 180px;
+
         }
     </style>
 
@@ -148,7 +235,7 @@
 
     <div class="container">
         <!-- Title -->
-        <h1 class="recipe-title">Salat von Danny ^^</h1>
+        <h1 class="recipe-title">knackiger Wintersalat</h1>
 
         <!-- Image -->
         <div class="recipe-image"></div>
@@ -156,13 +243,19 @@
         <!-- Meta Information -->
         <div class="recipe-meta">
             <div class="meta-item">
-                <span>🕒</span> 30 Min.
+
+                <img src="./img/icons/clock-regular.svg" alt="Uhr" class="meta-icon">
+                25 Min.
             </div>
             <div class="meta-item">
-                <span>✨</span> Simpel
+
+                <img src="./img/icons/brain-solid.svg" alt="Schweregrad" class="meta-icon">
+                Simpel
             </div>
             <div class="meta-item">
-                <span>📅</span> 08.11.2024
+                <img src="./img/icons/calendar-alt-regular.svg" alt="Kalender" class="meta-icon">
+                21.11.2024
+
             </div>
         </div>
 
@@ -175,25 +268,74 @@
 
         <!-- Ingredients -->
         <div class="ingredients-section">
-            <h2 class="ingredients-title">Für den Teig:</h2>
+            <h2 class="ingredients-title">Zutaten:</h2>
             <div class="ingredient-item">
-                <span class="ingredient-quantity">200 ml</span> Milch
+                <span class="ingredient-quantity">62 ½ g </span> Feldsalat
             </div>
             <div class="ingredient-item">
-                <span class="ingredient-quantity">50 g</span> Butter
+                <span class="ingredient-quantity">¼</span> Granatapfel
             </div>
             <div class="ingredient-item">
-                <span class="ingredient-quantity">450 g</span> Mehl, bei Bedarf evtl. etwas mehr
+                <span class="ingredient-quantity">½</span> Orange
             </div>
             <div class="ingredient-item">
-                <span class="ingredient-quantity">0.5 TL</span> Salz
+                <span class="ingredient-quantity">1 EL</span> Walnusskern
             </div>
             <div class="ingredient-item">
-                <span class="ingredient-quantity">70 g</span> Zucker
+                <span class="ingredient-quantity">20 g</span> Ziegen- Weichkäse
             </div>
-        </div>
-    </div>
+            <div class="ingredient-item">
+                <span class="ingredient-quantity">¼ EL</span> Balsamicoessig (hell)
+            </div>
+            <div class="ingredient-item">
+                <span class="ingredient-quantity">¼ EL</span> Honig
+            </div>
+            <div class="ingredient-item">
+                <span class="ingredient-quantity">½ TL</span> Senf
+            </div>
+            <div class="ingredient-item">
+                <span class="ingredient-quantity">½ EL</span> Olivenöl
+            </div>
 
+        </div>
+
+
+
+
+        <div class="preparation-section">
+
+            <h2 class="ingredients-title">Zubereitung:</h2>
+
+            <div class="meta-item-preparation">
+                <img src="./img/icons/clock-regular.svg" alt="Uhr" class="meta-icon">
+                Gesamtzeit: 25 Minuten
+            </div>
+
+
+        </div>
+
+
+
+         <footer>
+            <img class="footerlogo" src="img/logo.png">
+            <div class="footerlinks">
+                <a href="kontakt.css">Kontakt</a>
+                <a href="impressum.css">Impressum</a>
+            </div>
+            <div class="footersocials">
+                <div class="navfooter">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="./img/social_icons/Instagram.png">
+                    </a>
+                    <a href="https://de-de.facebook.com/" target="_blank">
+                        <img src="./img/social_icons/facebook_logo.png">
+                    </a>
+                    <a href="https://x.com/" target="_blank">
+                        <img src="./img/social_icons/Twitter_Icon.png">
+                    </a>
+                </div>
+            </div>
+        </footer> 
 </body>
 
 </html>
