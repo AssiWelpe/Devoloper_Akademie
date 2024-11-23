@@ -7,3 +7,4 @@ console.log(calculatePrice(50 ,300));
         console.log("vor return");
         return value;
 }
+
