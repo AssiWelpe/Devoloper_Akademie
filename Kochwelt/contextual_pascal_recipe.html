@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.container-0">
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="./css/index.container-css">
+    <script src="script.container-js"></script>
+    <link
+        href="https://fonts.container-googleapis.container-com/css2?family=Raleway:ital,wght@0,100..container-900;1,100..container-900&family=Viga&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.container-googleapis.container-com">
+    <link rel="preconnect" href="https://fonts.container-gstatic.container-com" crossorigin>
+
+    <style>
+        .container-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container-recipe-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .container-recipe-image {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            image-rendering: optimizeSpeed;
+            position: static;
+        }
+
+        .container-recipe-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .container-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            font-size: 18px;
+            background-color: #EAEAEA;
+            padding: 10px 15px;
+            border-radius: 10px;
+            min-width: 150px;
+        }
+
+        .container-border {
+            margin-top: 48px;
+            margin-bottom: 12px;
+            background-color: rgba(168, 165, 165, 0.container-2);
+            height: 3px;
+        }
+
+        .container-meta-icon {
+            width: 20px;
+            height: 20px;
+            background-image: url('./img/icon-clock.container-png');
+            background-position: center;
+        }
+
+        .container-portion-control {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+
+        .container-portion-control input {
+            width: 50px;
+            padding: 5px;
+            font-size: 16px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .container-portion-control button {
+            padding: 8px 15px;
+            font-size: 18px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container-portion-control button:hover {
+            background-color: #218838;
+        }
+
+        .container-ingredients-section {
+            margin-top: 20px;
+        }
+
+        .container-ingredients-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .container-ingredient-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            font-size: 18px;
+            font-weight: 400;
+            border-radius: 5px;
+        }
+
+        .container-ingredient-item:nth-child(odd) {
+            background-color: #FFFFFF;
+            /*  Weißer Hintergrund für ungerade Zeilen */
+        }
+
+        .container-ingredient-item:nth-child(even) {
+            background-color: #EAEAEA;
+            /* Hellgrauer Hintergrund für gerade Zeilen */
+        }
+
+        .container-ingredient-quantity {
+            /* font-weight: 600; */
+            /* Fettschrift für die Mengenangabe */
+            margin-right: 10px;
+            /* Abstand zwischen Menge und Text */
+            color: #333;
+        }
+
+        .container-preparation-section {
+            margin-top: 20px;
+            width: 250px;
+
+        }
+
+        .container-meta-item-preparation {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            font-size: 16px;
+            background-color: #EAEAEA;
+            padding: 10px 15px;
+            border-radius: 10px;
+            min-width: 150px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <section class="container-main-head">
+
+            <div class="container-logo-head"
+                style="width: 260px; height: 78px; background-image: url('./img/logo.container-png'); background-size: cover; background-position: center;">
+            </div>
+
+            <nav>
+                <a href="./index.container-html">Start</a>
+                <a href="./rezept_des_tages.container-html">Rezept des Tages</a>
+                <a href="./kontakt.container-html">Kontakt</a>
+                <a href="./impressum.container-html">Impressum</a>
+            </nav>
+        </section>
+    </header>
+
+
+
+
+    <main class="container-container">
+        <!-- Title -->
+        <h1 class="container-recipe-title">Rote Wintersuppe</h1>
+
+        <!-- Image -->
+        <img class="container-recipe-image" src="./img/wintersuppe.container-png" alt="Wintersuppe">
+
+        <!-- Meta Information -->
+        <section class="container-recipe-meta">
+
+            <div class="container-meta-item">
+
+                <img src="./img/icons/clock-regular.container-svg" alt="Uhr" class="container-meta-icon">
+                20 Min.
+            </div>
+
+            <div class="container-meta-item">
+                <img src="./img/icons/brain-solid.container-svg" alt="Schweregrad" class="container-meta-icon">
+                Simpel
+            </div>
+
+            <div class="container-meta-item">
+                <img src="./img/icons/calendar-alt-regular.container-svg" alt="Kalender" class="container-meta-icon">
+                23.container-11.container-2024
+            </div>
+
+        </section>
+
+        <div class="container-border"></div>
+
+        <!-- Portion Control -->
+        <section class="container-portion-control">
+            <label for="portions">Anzahl der Portionen:</label>
+            <input type="number" id="portions" value="1" min="1" max="8">
+            <button>Portionen</button>
+        </section>
+
+        <!-- Ingredients -->
+        <section class="container-ingredients-section">
+
+            <h2 class="container-ingredients-title"></h2>
+
+            <div class="container-ingredient-item">
+                <span class="container-ingredient-quantity">etwas</span> Butter 
+            </div>
+
+            <div class="container-ingredient-item">
+                <span class="container-ingredient-quantity">½</span> Zwiebel(n), klein gewürfelt 
+            </div>
+
+            <div class="container-ingredient-item">
+                <span class="container-ingredient-quantity">¼ Stück(e)</span> Ingwer, geschält, fein gehackt, fingerdicke Scheibe oder mehr
+            </div>
+
+            <div class="container-ingredient-item">
+                <span class="container-ingredient-quantity">¼</span> Apfel, fest, säuerlich, geschält, grob gewürfelt
+            </div>
+
+            <div class="container-ingredient-item">
+                <span class="container-ingredient-quantity">¼ Schuss</span> Weißwein, trocken, fruchtig, oder Apfelwein, nicht süß
+            </div>
+
+            <div class="container-ingredient-item">
+                <span class="container-ingredient-quantity">¼ Liter</span> Gemüsebrühe
+            </div>
+
+            <div class="container-ingredient-item">
+                <span class="container-ingredient-quantity">½</span> Rote Bete, geschält, gewürfelt
+            </div>
+
+            <div class="container-ingredient-item">
+                <span class="container-ingredient-quantity">½</span> Kartoffel(n), klein, geschält, gewürfelt
+            </div>
+
+            <div class="container-ingredient-item">
+                <span class="container-ingredient-quantity"></span> Salz und Pfeffer
+            </div>
+
+            <div class="container-ingredient-item">
+                <span class="container-ingredient-quantity">¼ Spritzer</span> Worcestershiresauce
+            </div>
+
+            <div class="container-ingredient-item">
+                <span class="container-ingredient-quantity">1 TL</span> Schmand
+            </div>
+
+            <div class="container-ingredient-item">
+                <span class="container-ingredient-quantity"></span> Kräuter, frisch
+            </div>
+
+        </section>
+
+
+
+
+        <section class="container-preparation-section">
+
+            <h2 class="container-ingredients-title">Zubereitung:</h2>
+
+            <div class="container-meta-item-preparation">
+                <img src="./img/icons/clock-regular.container-svg" alt="Uhr" class="container-meta-icon">
+                Gesamtzeit: 20 Minuten
+            </div>
+
+            
+
+        </section>
+
+        <section class="container-ingredients-text">
+
+            <p>
+                Die Zwiebeln in Butter anschwitzen. Ingwer- und Apfelwürfel zugeben, kurz mitschwitzen und mit dem Wein ablöschen. 
+                Die Brühe zugießen und zum Kochen bringen. Rote Bete und Kartoffeln zugeben, aufkochen, die Hitze reduzieren, zudecken und ca. 15-20 Minuten köcheln lassen. 
+                Pürieren, abschmecken und zum Kochen bringen. Den Schmand zugeben, garnieren und genießen.
+                Tipp: Rote Bete kann vorgegart (dann aber noch fest) oder frische Knolle sein. 
+                Die besten Erfahrungen habe ich mit selbst halbgar gekochter Roter Bete gemacht, dann ist das Schälen und Schneiden sauberer. 
+                Kartoffeln sorgen für die Konsistenz und auch dafür, dass die Farbe nicht so stechend blutig wirkt.
+            </p>
+
+        </section>
+
+
+
+
+
+    </main>
+
+    <footer>
+        <section class="container-footer">
+            <img class="container-footer_logo" img src="./img/logo-white.container-png" alt="LOGO">
+    
+            <div class="container-impressum_contact">
+                <a href="kontakt.container-css">Kontakt</a>
+                <a href="impressum.container-css">Impressum</a>
+            </div>
+    
+            <div class="container-socials">
+                
+                <a href="https://www.container-instagram.container-com/" target="_blank"><img class="container-sociallogo" src="./img/social_icons/Instagram.container-png"></a>
+    
+                <a href="https://de-de.container-facebook.container-com/"  target="_blank"><img class="container-sociallogo"  src="./img/social_icons/facebook_logo.container-png"></a>
+    
+                <a href="https://x.container-com/"  target="_blank"><img class="container-sociallogo"  src="./img/social_icons/Twitter_Icon.container-png" ></a>
+    
+            </div>
+    
+    
+        </section>
+    
+    </footer>
+
+</body>
+
+</html>
