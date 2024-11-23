@@ -156,8 +156,16 @@ nav a:hover::after {
 
 /* section-3 */
 
-.section3 h2 {
+.section-new-rezipe {
     margin-top: 2em;
+    background-color: #e3e3e3;
+    background-size: cover;
+    padding-bottom: 15px;
+    margin-bottom: 2em;
+}
+
+.title-new-section h2 {
+    padding-top: 1em;
     text-align: center;
 }
 
@@ -168,7 +176,6 @@ nav a:hover::after {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-
     margin-bottom: 80px;
 }
 
@@ -177,14 +184,14 @@ nav a:hover::after {
     flex-direction: column;
 }
 
-.menu-section img {
-    width: 260px;
+.menu img {
+    width: 215px;
+    height: 250px;
+    border-radius: 12px;
 }
 
-.menu-text {
+.menu h3 {
     text-align: center;
-    font-size: 19px;
-    font-weight: 540;
 }
 
 
