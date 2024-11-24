@@ -10,7 +10,6 @@ html {
 
 .my-body {
     margin: 0%;
-    height: 100%;
 }
 
 .raleway {
@@ -210,15 +209,15 @@ nav a:hover::after {
 
 .info-board {
     display: flex;
-    align-items: center;
-    padding: 24px 0 56px 0;
+    flex-direction: row;
+    padding-top: 24px;
+    padding-bottom: 56px;
     gap: 40px;
 }
 
 .info-board-img-right {
     width: 280px;
     border-radius: 8px;
-    
 }
 
 .info-board p {
