@@ -12,172 +12,7 @@
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <style>
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .recipe-title {
-            text-align: center;
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            margin-top: 20px;
-        }
-
-        .recipe-image {
-            width: 100%;
-            height: 300px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            image-rendering: optimizeSpeed;
-            position: static;
-        }
-
-        .recipe-meta {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 26px;
-            font-size: 18px;
-            background-color: #EAEAEA;
-            padding: 10px 15px;
-            border-radius: 10px;
-            min-width: 150px;
-        }
-
-        .border {
-            margin-top: 48px;
-            margin-bottom: 12px;
-            background-color: rgba(168, 165, 165, 0.2);
-            height: 3px;
-        }
-
-        .meta-icon {
-            width: 20px;
-            height: 20px;
-            background-image: url('./img/icon-clock.png');
-            background-position: center;
-        }
-
-        .portion-control {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            gap: 10px;
-        }
-
-        .portion-control input {
-            width: 50px;
-            padding: 5px;
-            font-size: 16px;
-            text-align: center;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .portion-control button {
-            padding: 8px 15px;
-            font-size: 18px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .portion-control button:hover {
-            background-color: #218838;
-        }
-
-        .ingredients-section {
-            margin-top: 20px;
-        }
-
-        .ingredients-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .ingredient-item {
-            display: flex;
-            align-items: center;
-            padding: 10px 15px;
-            font-size: 18px;
-            font-weight: 400;
-            border-radius: 5px;
-        }
-
-        .ingredient-item:nth-child(odd) {
-            background-color: #FFFFFF;
-            /*  Weißer Hintergrund für ungerade Zeilen */
-        }
-
-        .ingredient-item:nth-child(even) {
-            background-color: #EAEAEA;
-            /* Hellgrauer Hintergrund für gerade Zeilen */
-        }
-
-        .ingredient-quantity {
-            /* font-weight: 600; */
-            /* Fettschrift für die Mengenangabe */
-            margin-right: 10px;
-            /* Abstand zwischen Menge und Text */
-            color: #333;
-        }
-
-        .preparation-section {
-            margin-top: 20px;
-            width: 250px;
-
-        }
-
-        .meta-item-preparation {
-            display: flex;
-            align-items: center;
-            gap: 26px;
-            font-size: 16px;
-            background-color: #EAEAEA;
-            padding: 10px 15px;
-            border-radius: 10px;
-            min-width: 150px;
-        }
-
-
-        /* Section Profile */
-
-        .profile {
-            margin-top: 20px;
-            
-        }
-
-        .profile h3 {
-            font-weight: 100;
-        }
-
-        .profile-text {
-            float: right;
-            display: flex;
-            align-items: center;
-            font-size: 28px;
-            font-weight: lighter;
-        }
-
-        .profile-img-text img{
-            border-radius: 50%;
-            width: 90px;
-            margin-right: 32px;
-        }
-    </style>
-
+    <link rel="stylesheet" href="css/pascal_recipe.css">
 </head>
 
 <body>
@@ -326,19 +161,20 @@
         <!-- Profile Section -->
 
         <section class="profile">
-            
-            <h2>Rezept erstellt von</h2>
+            <div>
 
-            <div class="profile-img-text">
+                <h2 class="profile-title">Rezept erstellt von</h2>
 
-                <img src="./img/pascallogo.png" alt="Profile-Image">
-                
-                <span class="profile-text">Pascal</span>
-            
+                <div class="profile-info">
+
+                    <img class="profile-image" src="./img/pascallogo.png" alt="Team Member">
+
+                    <div>Pascal Gröger</div>
+
+                </div>
+
+
             </div>
-
-    
-
         </section>
 
    

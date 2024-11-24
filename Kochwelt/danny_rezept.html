@@ -46,8 +46,8 @@
         .meta-item {
             display: flex;
             align-items: center;
-            gap: 26px;
-            font-size: 16px;
+            gap: 24px;
+            font-size: 18px;
             background-color: #EAEAEA;
             padding: 6px 15px;
             border-radius: 10px;
@@ -71,7 +71,7 @@
         .portion-control input {
             width: 50px;
             padding: 5px;
-            font-size: 16px;
+            font-size: 18px;
             text-align: center;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -79,7 +79,7 @@
 
         .portion-control button {
             padding: 8px 15px;
-            font-size: 16px;
+            font-size: 18px;
             background-color: #28a745;
             color: white;
             border: none;
@@ -105,20 +105,20 @@
             display: flex;
             align-items: center;
             padding: 10px 15px;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 400;
             border-radius: 5px;
         }
 
-        .ingredients-text{
+        .ingredients-text {
             color: #333;
             margin-top: 20px;
             margin-bottom: 20px;
-            font-size: 16px;
+            font-size: 18px;
 
-            
 
-            
+
+
         }
 
         .ingredient-item:nth-child(odd) {
@@ -149,7 +149,7 @@
             display: flex;
             align-items: center;
             gap: 26px;
-            font-size: 16px;
+            font-size: 18px;
             background-color: #EAEAEA;
             padding: 10px 15px;
             border-radius: 10px;
@@ -161,6 +161,40 @@
             margin-bottom: 12px;
             background-color: rgba(168, 165, 165, 0.2);
             height: 1px;
+        }
+
+
+        /* section profile */
+
+        .profile {
+            display: flex;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 90px;
+            background-image: url('./img/user.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .profile-info {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            display: flex;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+
+        .profile-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+
         }
     </style>
 
@@ -269,7 +303,7 @@
                 Gesamtzeit: 25 Minuten
             </div>
 
-            
+
 
         </section>
 
@@ -288,6 +322,23 @@
 
             </p>
 
+        </section>
+
+        <section class="profile">
+            <div>
+
+                <h2 class="profile-title">Rezept erstellt von</h2>
+
+                <div class="profile-info">
+
+                    <img class="profile-image" src="./img/profile.png" alt="Team Member">
+
+                    <div>Danny Hoffmann</div>
+
+                </div>
+
+
+            </div>
         </section>
 
 
