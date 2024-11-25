@@ -94,12 +94,12 @@
 }
 
 
-.ingredient-item:nth-child(odd) {
+.ingredient-item:nth-child(even) {
     background-color: #FFFFFF;
     /*  Weißer Hintergrund für ungerade Zeilen */
 }
 
-.ingredient-item:nth-child(even) {
+.ingredient-item:nth-child(odd) {
     background-color: #EAEAEA;
     /* Hellgrauer Hintergrund für gerade Zeilen */
 }
@@ -112,15 +112,19 @@
     font-size: 18px;
     font-weight: 400;
     border-radius: 5px;
-    justify-content: flex-start; /* Elemente nach links ausrichten */
-    gap: 15px; /* Abstand zwischen Menge und Zutat */
+    justify-content: flex-end; /* Elemente nach links ausrichten */
+    /* gap: 15px; Abstand zwischen Menge und Zutat */
 }
 
 .ingredient-quantity {
-    font-weight: bold; /* Optional: Menge hervorheben */
+    /* font-weight: bold; Optional: Menge hervorheben */
     color: #333;
     min-width: 60px; /* Sicherstellen, dass die Mengen gleichmäßig ausgerichtet sind */
     text-align: left; /* Text linksbündig ausrichten */
+}
+.ingredient-text {
+    flex-grow: 1;
+    text-align: right;
 }
 
 .preparation-section {

@@ -14,9 +14,10 @@ function updateRecipe() {
     // Alle Zeilen im Tabellenkörper durchgehen
     const rows = table.querySelectorAll("tbody tr");
     rows.forEach((row) => {
+        const element = row.querySelector("td[data-base]");
         // Basiswert und Textbeschreibung abrufen
-        const baseAmount = parseFloat(row.querySelector("td[data-base]").dataset.base);
-        const text = row.querySelector("td[data-base]").dataset.text;
+        const baseAmount = parseFloat(element.dataset.base);
+        const text = element.dataset.text;
 
         // Prüfen, ob die Zutat eine numerische Basis hat
         if (!isNaN(baseAmount) && baseAmount > 0) {
@@ -24,10 +25,14 @@ function updateRecipe() {
             const newAmount = baseAmount * portionSize;
 
             // Die Zelle mit der neuen Menge aktualisieren
-            row.querySelector("td[data-base]").innerText = `${newAmount}`;
+            if (text) {
+                element.innerText = `${newAmount} ${text}`;
+            } else {
+                element.innerText = `${newAmount}`;
+            }
         } else if (text) {
             // Wenn es keine numerische Basis gibt, den Text beibehalten (z. B. "etwas", "nach Geschmack")
-            row.querySelector("td[data-base]").innerText = text;
+            element.innerText = text;
         }
     });
 }
