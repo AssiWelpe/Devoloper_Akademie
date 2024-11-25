@@ -93,14 +93,6 @@
     margin-bottom: 15px;
 }
 
-.ingredient-item {
-    display: flex;
-    align-items: center;
-    padding: 10px 15px;
-    font-size: 18px;
-    font-weight: 400;
-    border-radius: 5px;
-}
 
 .ingredient-item:nth-child(odd) {
     background-color: #FFFFFF;
@@ -112,12 +104,23 @@
     /* Hellgrauer Hintergrund für gerade Zeilen */
 }
 
+.ingredient-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+    justify-content: flex-start; /* Elemente nach links ausrichten */
+    gap: 15px; /* Abstand zwischen Menge und Zutat */
+}
+
 .ingredient-quantity {
-    /* font-weight: 600; */
-    /* Fettschrift für die Mengenangabe */
-    margin-right: 10px;
-    /* Abstand zwischen Menge und Text */
+    font-weight: bold; /* Optional: Menge hervorheben */
     color: #333;
+    min-width: 60px; /* Sicherstellen, dass die Mengen gleichmäßig ausgerichtet sind */
+    text-align: left; /* Text linksbündig ausrichten */
 }
 
 .preparation-section {

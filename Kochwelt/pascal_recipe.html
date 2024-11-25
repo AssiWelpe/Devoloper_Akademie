@@ -70,63 +70,70 @@
         <!-- Portion Control -->
         <section class="portion-control">
             <label for="portions">Anzahl der Portionen:</label>
-            <input type="number" id="portions" value="1" min="1" max="8">
-            <button>Portionen</button>
+            <input type="number" id="portionInput" value="1" min="1" max="8">
+            <button onclick="updateRecipe()">Portionen</button>
         </section>
 
         <!-- Ingredients -->
         <section class="ingredients-section">
 
-            <h2 class="ingredients-title"></h2>
+            <h2 class="ingredients-title">Zutaten:</h2>
+            <table id="recipeTable">
 
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">etwas</span> Butter 
-            </div>
+                <tbody>
+                    <tr class="ingredient-item">
+                        <td data-base="0" data-text="etwas" class="ingredient-quantity">etwas</td>
+                        <td>Butter</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.5" class="ingredient-quantity">0.5</td>
+                        <td>Zwiebel(n), klein gewürfelt</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.25" class="ingredient-quantity">0.25</td>
+                        <td>Ingwer, geschält, fein gehackt</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.25" class="ingredient-quantity">0.25</td>
+                        <td>Apfel, fest, säuerlich, geschält, grob gewürfelt</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.25 Liter" class="ingredient-quantity">0.25 Liter</td>
+                        <td>Weißwein oder Apfelwein</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.25 Liter" class="ingredient-quantity">0.25 Liter</td>
+                        <td>Gemüsebrühe</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.5" class="ingredient-quantity">0.5</td>
+                        <td>Rote Bete, geschält, gewürfelt</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.5" class="ingredient-quantity">0.5</td>
+                        <td>Kartoffel(n), klein, geschält, gewürfelt</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0" data-text="etwas" class="ingredient-quantity">etwas</td>
+                        <td>Salz und Pfeffer</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.25 Spritzer" class="ingredient-quantity">0.25 Spritzer</td>
+                        <td>Worcestershiresauce</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="1 TL" class="ingredient-quantity">1 TL</td>
+                        <td>Schmand</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0" data-text="etwas" class="ingredient-quantity">etwas</td>
+                        <td>Frische Kräuter</td>
+                    </tr>
+                </tbody>
+            </table>
+        
 
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">½</span> Zwiebel(n), klein gewürfelt 
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼ Stück(e)</span> Ingwer, geschält, fein gehackt, fingerdicke Scheibe oder mehr
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼</span> Apfel, fest, säuerlich, geschält, grob gewürfelt
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼ Schuss</span> Weißwein, trocken, fruchtig, oder Apfelwein, nicht süß
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼ Liter</span> Gemüsebrühe
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">½</span> Rote Bete, geschält, gewürfelt
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">½</span> Kartoffel(n), klein, geschält, gewürfelt
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity"></span> Salz und Pfeffer
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼ Spritzer</span> Worcestershiresauce
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">1 TL</span> Schmand
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity"></span> Kräuter, frisch
-            </div>
-
+        <script src="js/pascal_recipe.js"></script>
         </section>
 
 
