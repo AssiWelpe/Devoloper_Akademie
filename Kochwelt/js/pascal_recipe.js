@@ -1,3 +1,4 @@
+addEventListener("load",updateRecipe);
 function updateRecipe() {
     // Die Portionsgröße aus dem Eingabefeld abrufen
     const portionSize = parseFloat(document.getElementById("portionInput").value);
