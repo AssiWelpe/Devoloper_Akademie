@@ -47,8 +47,8 @@ header {
 }
 
 .logo-head img {
-    width: 200px; 
-    height: 75px; 
+    width: 260px; 
+    height: 78px; 
 }
 
 .main-head {
@@ -63,7 +63,7 @@ header {
 nav {
     display: flex;
     gap: 30px;
-    padding-top: 75px;
+    padding-top: 60px;
     font-weight: 600;
     font-size: 16px;
 }
