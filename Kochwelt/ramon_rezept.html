@@ -17,16 +17,17 @@
 
 <body>
 
-<!-- Header -->
-
     <header>
+
         <section class="main-head">
 
             <div class="logo-head">
                 <a href="index.html">
-                    <img src="./img/logo.png" alt="Logo">
+                    <img src="./img/logo.png">
                 </a>
             </div>
+               
+            
 
             <nav>
                 <a href="./index.html">Start</a>
@@ -37,14 +38,15 @@
         </section>
     </header>
 
-<!-- 2. Section -->
+
+
 
     <main class="container">
         <!-- Title -->
-        <h1 class="recipe-title">Rote Wintersuppe</h1>
+        <h1 class="recipe-title">Nougatmousse mit Kalamansi-Sorbet</h1>
 
         <!-- Image -->
-        <img class="recipe-image" src="./img/wintersuppe.png" alt="Wintersuppe">
+        <img class="recipe-image" src="./img/nougat-kalamansi.png" alt="Nougat-Kalamansi">
 
         <!-- Meta Information -->
         <section class="recipe-meta">
@@ -52,17 +54,17 @@
             <div class="meta-item">
 
                 <img src="./img/icons/clock-regular.svg" alt="Uhr" class="meta-icon">
-                20 Min.
+                180 Min.
             </div>
 
             <div class="meta-item">
                 <img src="./img/icons/brain-solid.svg" alt="Schweregrad" class="meta-icon">
-                Simpel
+                Herrausfordernd
             </div>
 
             <div class="meta-item">
                 <img src="./img/icons/calendar-alt-regular.svg" alt="Kalender" class="meta-icon">
-                23.11.2024
+                20.11.2024
             </div>
 
         </section>
@@ -72,67 +74,75 @@
         <!-- Portion Control -->
         <section class="portion-control">
             <label for="portions">Anzahl der Portionen:</label>
-            <input type="number" id="portions" value="1" min="1" max="8">
-            <button>Portionen</button>
+            <input type="number" id="portionInput" value="4" min="1" max="8">
+            <button onclick="updateRecipe()">Portionen</button>
         </section>
 
         <!-- Ingredients -->
         <section class="ingredients-section">
 
-            <h2 class="ingredients-title"></h2>
+            <h2 class="ingredients-title">Zutaten:</h2>
+            <table id="recipeTable">
 
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">etwas</span> Butter 
-            </div>
+                <!-- Zutaten Nougat-Mousse -->
+                <h3>Nougat-Mousse</h3>
+                <tbody>
+                    <tr class="ingredient-item">
+                        <td data-base="250" data-text="g" class="ingredient-quantity">250g</td>
+                        <td>Milch</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="125" data-text="g" class="ingredient-quantity">125g</td>
+                        <td>Nougat</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="150" data-text="g" class="ingredient-quantity">150g</td>
+                        <td>Milchschokolade</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="425" data-text="g" class="ingredient-quantity">425g</td>
+                        <td>Rahm</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="25" data-text="g" class="ingredient-quantity">25g</td>
+                        <td>Amaretto</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="3" data-text="Blatt" class="ingredient-quantity">3 Blatt</td>
+                        <td>Gelatine</td>
+                    </tr>
+                    <br>
+                <!-- Zutaten Passion-Kalamansi-Sorbet -->
+                <h3>Passion-Kalamansi-Sorbet</h3>
+                    <tr class="ingredient-item">
+                        <td data-base="0.5" data-text="etwas" class="ingredient-quantity">0.5</td>
+                        <td>Kartoffel(n), klein, geschält, gewürfelt</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0" data-text="etwas" class="ingredient-quantity">etwas</td>
+                        <td>Salz und Pfeffer</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.25 Spritzer" data-text="etwas" class="ingredient-quantity">0.25 Spritzer</td>
+                        <td>Worcestershiresauce</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="1 TL" data-text="etwas" class="ingredient-quantity">1 TL</td>
+                        <td>Schmand</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0" data-text="etwas" class="ingredient-quantity">etwas</td>
+                        <td>Frische Kräuter</td>
+                    </tr>
+                </tbody>
+            </table>
+        
 
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">½</span> Zwiebel(n), klein gewürfelt 
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼ Stück(e)</span> Ingwer, geschält, fein gehackt, fingerdicke Scheibe oder mehr
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼</span> Apfel, fest, säuerlich, geschält, grob gewürfelt
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼ Schuss</span> Weißwein, trocken, fruchtig, oder Apfelwein, nicht süß
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼ Liter</span> Gemüsebrühe
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">½</span> Rote Bete, geschält, gewürfelt
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">½</span> Kartoffel(n), klein, geschält, gewürfelt
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity"></span> Salz und Pfeffer
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼ Spritzer</span> Worcestershiresauce
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">1 TL</span> Schmand
-            </div>
-
-            <div class="ingredient-item">
-                <span class="ingredient-quantity"></span> Kräuter, frisch
-            </div>
-
+        <script src="js/pascal_recipe.js"></script>
         </section>
 
 
-<!-- Zubereitung Section -->
+
 
         <section class="preparation-section">
 
@@ -140,9 +150,11 @@
 
             <div class="meta-item-preparation">
                 <img src="./img/icons/clock-regular.svg" alt="Uhr" class="meta-icon">
-                Gesamtzeit: 20 Minuten
+                Gesamtzeit: 180 Minuten
             </div>
-    <br>
+
+            
+
         </section>
 
         <section class="ingredients-text">
@@ -158,11 +170,11 @@
 
         </section>
 
-<!-- Profile Section -->
+        <!-- Profile Section -->
 
         <section class="profile">
             <div>
-            <br>
+
                 <h2 class="profile-title">Rezept erstellt von</h2>
 
                 <div class="profile-info">
@@ -172,6 +184,8 @@
                     <div>Ramon Martin</div>
 
                 </div>
+
+
             </div>
         </section>
 
@@ -181,11 +195,9 @@
 
     </main>
 
-<!-- Footer -->
-
     <footer>
         <section class="footer">
-            <img class="footer_logo" img src="./img/logo-white.png" alt="LOGO">
+            <a href="index.html"><img class="footer_logo" img src="./img/logo-white.png" alt="LOGO"></a> 
     
             <div class="impressum_contact">
                 <a href="kontakt.css">Kontakt</a>
@@ -201,7 +213,8 @@
                 <a href="https://x.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/Twitter_Icon.png" ></a>
     
             </div>
-            
+    
+    
         </section>
     
     </footer>
