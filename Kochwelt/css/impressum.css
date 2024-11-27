@@ -1,0 +1,37 @@
+body {
+    font-family: 'Raleway', sans-serif; /* Use Raleway font */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+main {
+    max-width: 800px; /* Limit main content width */
+    margin: 20px auto; /* Center the content */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #28a745; /* Green heading color */
+}
+
+h2 {
+    margin-top: 20px; /* Add spacing above h2 headings */
+    color: #555; /* Darker gray for subheadings */
+}
+
+p {
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: 600; /* Make the Hinweis stand out */
+}
+
+
