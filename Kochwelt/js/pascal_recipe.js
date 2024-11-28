@@ -41,31 +41,30 @@ function updateRecipe() {
     });
 }
 
-function formatAsFraction(amount) {
-    if (Math.abs(amount - 8) < 0.01) return "8";
-    if (Math.abs(amount - 7) < 0.01) return "7";
-    if (Math.abs(amount - 6) < 0.01) return "6";
-    if (Math.abs(amount - 5) < 0.01) return "5";
-    if (Math.abs(amount - 4.75) < 0.01) return "4 ¾";
-    if (Math.abs(amount - 4.5) < 0.01) return "4 ½";
-    if (Math.abs(amount - 4.25) < 0.01) return "4 ¼";
-    if (Math.abs(amount - 4) < 0.01) return "4";
-    if (Math.abs(amount - 3.75) < 0.01) return "3 ¾";
-    if (Math.abs(amount - 3.5) < 0.01) return "3 ½";
-    if (Math.abs(amount - 3.25) < 0.01) return "3 ¼";
-    if (Math.abs(amount - 3) < 0.01) return "3";
-    if (Math.abs(amount - 2.75) < 0.01) return "2 ¾";
-    if (Math.abs(amount - 2.5) < 0.01) return "2 ½";
-    if (Math.abs(amount - 2.25) < 0.01) return "2 ¼";
-    if (Math.abs(amount - 2) < 0.01) return "2";
-    if (Math.abs(amount - 1.75) < 0.01) return "1 ¾";
-    if (Math.abs(amount - 1.5) < 0.01) return "1 ½";
-    if (Math.abs(amount - 1.25) < 0.01) return "1 ¼";
-    if (Math.abs(amount - 1) < 0.01) return "1";
-    if (Math.abs(amount - 0.75) < 0.01) return "¾";
-    if (Math.abs(amount - 0.5) < 0.01) return "½";
-    if (Math.abs(amount - 0.25) < 0.01) return "¼";
-
-    return amount.toFixed(2); 
-}
-
+function equal(x, y) {
+    return Math.abs(x - y) < Number.EPSILON;
+  }
+  
+  function formatAsFraction(amount) {
+    let full_part = Math.trunc(amount);
+    let fraction = amount - full_part;
+    let output = "";
+    if (full_part > 0) {
+      output = `${full_part}`;
+    }
+  
+    if (equal(fraction, 0.25)) {
+      output += " ¼";
+    } else if (equal(fraction, 0.5)) {
+      output += " ½";
+    } else if (equal(fraction, 0.75)) {
+      output += " ¾";
+    } else if (equal(fraction, 0)) {}else {
+      if (full_part == 0) {
+         output += '${fraction.toFixed(2)}';
+       } else {output += `.${fraction.toFixed(2).substring(2)}`;
+     } 
+    }
+    
+    return output;
+  }
