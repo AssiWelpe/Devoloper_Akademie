@@ -144,12 +144,13 @@
 }
 
 
-/* section profile */
+
 
 .profile {
     display: flex;
     border-radius: 10px;
     margin-bottom: 20px;
+    padding-top: 10px;
 }
 
 .profile-image {

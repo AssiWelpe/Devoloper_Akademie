@@ -18,14 +18,15 @@
 <body>
 
     <header>
-
         <section class="main-head">
-
-            <div class="logo-head"
-                style="width: 260px; height: 78px; background-image: url('./img/logo.png'); background-size: cover; background-position: center;">
+    
+            <div class="logo-head">
+                <a href="index.html">
+                    <img src="./img/logo.png" alt="Logo">
+                </a>
             </div>
-
-            <nav>
+    
+            <nav class="nav-links">
                 <a href="./index.html">Start</a>
                 <a href="./rezept_des_tages.html">Rezept des Tages</a>
                 <a href="./kontakt.html">Kontakt</a>
@@ -38,13 +39,13 @@
 
 
     <main class="container">
-        <!-- Title -->
+
         <h1 class="recipe-title">Rote Wintersuppe</h1>
 
-        <!-- Image -->
+
         <img class="recipe-image" src="./img/wintersuppe.webp" alt="Wintersuppe">
 
-        <!-- Meta Information -->
+
         <section class="recipe-meta">
 
             <div class="meta-item">
@@ -67,14 +68,13 @@
 
         <div class="border"></div>
 
-        <!-- Portion Control -->
         <section class="portion-control">
             <label for="portions">Anzahl der Portionen:</label>
             <input type="number" id="portionInput" value="1" min="1" max="8">
             <button onclick="updateRecipe()">Portionen</button>
         </section>
 
-        <!-- Ingredients -->
+
         <section class="ingredients-section">
 
             <h2 class="ingredients-title">Zutaten:</h2>
@@ -165,7 +165,7 @@
 
         </section>
 
-        <!-- Profile Section -->
+  
 
         <section class="profile">
             <div>
