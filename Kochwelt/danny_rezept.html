@@ -196,6 +196,15 @@
             margin-bottom: 20px;
 
         }
+
+        table {
+
+            width: 100%;
+            /* Die Tabelle nimmt die volle Breite der Seite ein */
+
+
+
+        }
     </style>
 
 </head>
@@ -250,46 +259,66 @@
 
         <div class="border"></div>
 
-
         <!-- Portion Control -->
-        <div class="portion-control">
+        <section class="portion-control">
             <label for="portions">Anzahl der Portionen:</label>
-            <input type="number" id="portions" value="1" min="1" max="20">
-            <button>Portionen</button>
-        </div>
+            <input type="number" id="portionInput" value="1" min="1" max="8">
+            <button onclick="updateRecipe()">Portionen</button>
+        </section>
 
         <!-- Ingredients -->
-        <div class="ingredients-section">
-            <h2 class="ingredients-title">Zutaten:</h2>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">62 ½ g </span> Feldsalat
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼</span> Granatapfel
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">½</span> Orange
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">1 EL</span> Walnusskern
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">20 g</span> Ziegen- Weichkäse
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼ EL</span> Balsamicoessig (hell)
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">¼ EL</span> Honig
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">½ TL</span> Senf
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">½ EL</span> Olivenöl
-            </div>
+        <section class="ingredients-section">
 
-        </div>
+            <h2 class="ingredients-title">Zutaten:</h2>
+            <table id="recipeTable">
+
+                <tbody>
+                    <tr class="ingredient-item">
+                        <td data-base="62.5 g" data-text="g" class="ingredient-quantity">62.5 g</td>
+                        <td>Feldsalat</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.25" class="ingredient-quantity">0.25</td>
+                        <td>Granatapfel</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.5" class="ingredient-quantity">0.5</td>
+                        <td>Orange</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="1 EL" class="ingredient-quantity">1 EL</td>
+                        <td>Walnusskern</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="20 g" class="ingredient-quantity">20 g</td>
+                        <td>Ziegenweichkäse</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.25 EL" class="ingredient-quantity">0.25 EL</td>
+                        <td>Balsamico-Essig (hell)</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.25 EL" class="ingredient-quantity">0.25 EL</td>
+                        <td>Honig</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0" data-text="etwas" class="ingredient-quantity">etwas</td>
+                        <td>Senf</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.5 TL" class="ingredient-quantity">0.5 TL</td>
+                        <td>Worcestershiresauce</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.5 EL" class="ingredient-quantity">0.5 EL</td>
+                        <td>Olivenöl</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <script src="js/danny-rezept.js"></script>
+        </section>
 
 
 
