@@ -15,6 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Viga&display=swap"
         rel="stylesheet">
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -26,10 +27,16 @@
     
             <div class="logo-head">
                 <a href="index.html">
-                    <img src="./img/logo.png" alt="Logo">
+                    <picture >
+                        <source media="(max-width: 800px)" srcset="./img/logo_small.png"></source>
+                        <img src="./img/logo.png" alt="LOGO">            
+                    </picture>
                 </a>
             </div>
-    
+            <div class="mobile-button-group">
+                <img onclick="toggleMobileMenu()" aria-hidden="true" focusable="false" src="./img/icons/bars-solid.svg"></img>
+                <img onclick="toggleMobileMenu()" class="mobile-hidden" aria-hidden="true" focusable="false" src="./img/icons/bars-staggered-solid.svg"></img>
+            </div>
             <nav class="nav-links">
                 <a href="./index.html">Start</a>
                 <a href="./rezept_des_tages.html">Rezept des Tages</a>
@@ -38,6 +45,14 @@
             </nav>
         </section>
     </header>
+    <div class="mobile-nav-links">
+        <nav>
+            <a href="./index.html">Start</a>
+            <a href="./rezept_des_tages.html">Rezept des Tages</a>
+            <a href="./kontakt.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </nav>
+    </div>
 
 <!-- 2. Section -->
 
@@ -104,7 +119,10 @@
 
 <footer>
     <section class="footer">
-        <a href="index.html"><img class="footer_logo" img src="./img/logo-white.png" alt="LOGO"></a> 
+        <picture >
+            <source media="(max-width: 700px)" srcset="./img/logo_small.png"></source>
+            <img class="footer_logo" src="./img/logo-white.png" alt="LOGO">            
+        </picture>
 
         <div class="impressum_contact">
             <a href="./kontakt.html">Kontakt</a>

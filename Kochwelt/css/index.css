@@ -80,7 +80,7 @@ nav a:hover {
 }
 
 /* nav-links transition */
-nav a::after {
+nav.nav-links a::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -102,6 +102,9 @@ nav a:hover::after {
     /* Linie füllt sich bei Hover */
 }
 
+.mobile-button-group {
+    display: none;
+}
 
 
 /* section 2 */
@@ -117,7 +120,7 @@ nav a:hover::after {
 }
 
 .recipe-section img {
-    width: 480px;
+    width: min(480px, 100%);
     border-radius: 8px;
 }
 
@@ -218,6 +221,7 @@ nav a:hover::after {
 
 .info-board-img-right {
     width: 280px;
+    aspect-ratio: 1;
     border-radius: 8px;
 }
 
@@ -297,5 +301,90 @@ nav a:hover::after {
 
     .menu {
         margin-bottom: 20px;
+    }
+}
+
+.mobile-nav-links {
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-nav-links > nav {
+    display: none;
+    flex-direction: column;
+    z-index: 1;
+
+    position: absolute;
+    background-color: white;
+    right: 0;
+    padding-top: 0;
+    border-radius: 0 0 0 5px;
+    transition: transform 250ms ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    gap: 0;
+    justify-content: space-evenly;
+    height: 180px;
+    padding-left: 0.5em;
+}
+@media (max-width: 800px) {
+    .recipe-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .recipe-content {
+        margin-top: 2em;
+        height: unset;
+    }
+    .logo-head img {
+        width: unset;
+        aspect-ratio: 1;
+    }
+
+    .mobile-button-group {
+        display: unset;
+    }
+    
+    
+    .mobile-button-group > img{
+        width: 23px;
+        height: 23px;
+    }
+    
+    .mobile-hidden {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-nav-links > nav {
+        display: flex;
+    }
+    .mobile-nav-links > nav:not(.nav-links-open) {
+        transform: translateX(100%);
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer_logo {
+        height: 70px;
+        width: unset;
+        aspect-ratio: 1;
+        filter: invert(1);
+        padding: 10px;
+    }
+    .info-board {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 515px) {
+    .impressum_contact {
+        display: none;
     }
 }
