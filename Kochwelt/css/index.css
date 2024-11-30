@@ -9,7 +9,7 @@ html {
 }
 
 .my-body {
-    margin: 0%;
+    margin: 0;
 }
 
 .raleway {
@@ -56,8 +56,8 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 nav {
@@ -113,7 +113,7 @@ nav a:hover::after {
     background-color: #fff;
     overflow: hidden;
     padding-top: 4em;
-    margin-left: 180px;
+    margin-left: 5%;
 }
 
 .recipe-section img {
@@ -128,7 +128,7 @@ nav a:hover::after {
     flex-direction: column;
     float: right;
     height: 320px;
-    margin-right: 180px;
+    margin-right: 5%;
 }
 
 .recipe-title {
@@ -167,6 +167,8 @@ nav a:hover::after {
     background-size: cover;
     padding-bottom: 15px;
     margin-bottom: 2em;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .title-new-section h2 {
@@ -175,13 +177,13 @@ nav a:hover::after {
 }
 
 .menu-section {
-    margin-left: 180px;
-    margin-right: 180px;
+    padding: 35px;
     margin-top: 4em;
+    gap: 20px;
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     margin-bottom: 80px;
+    justify-content: space-between;
 }
 
 .menu {
@@ -199,12 +201,11 @@ nav a:hover::after {
     text-align: center;
 }
 
-/* Section 4 */
 
 .section-info-board {
     text-align: center;
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .info-board {
@@ -246,7 +247,7 @@ nav a:hover::after {
 .footer_logo{
     height: 75px;
     width: 225px;
-    margin-left: 180px;
+    margin-left: 5%;
 }
 
 
@@ -263,10 +264,38 @@ nav a:hover::after {
     color: white;
 }
 .socials{
-    margin-right: 180px;
+    margin-right: 5%;
 }
 
 .socials a:hover{
     text-decoration: none;
     filter: drop-shadow(0px 0px 10px #c0bfbf);
+}
+
+
+
+
+
+
+
+@media (max-width: 1600px) {
+    .menu img {
+        width: 180px;
+        height: 120px;
+    }    
+}
+
+
+
+
+
+@media (max-width: 1250px) {
+    .menu-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu {
+        margin-bottom: 20px;
+    }
 }
