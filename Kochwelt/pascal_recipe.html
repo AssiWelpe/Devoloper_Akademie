@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/pascal_recipe.css">
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -22,10 +23,16 @@
     
             <div class="logo-head">
                 <a href="index.html">
-                    <img src="./img/logo.png" alt="Logo">
+                    <picture >
+                        <source media="(max-width: 800px)" srcset="./img/logo_small.png"></source>
+                        <img src="./img/logo.png" alt="LOGO">            
+                    </picture>
                 </a>
             </div>
-    
+            <div class="mobile-button-group">
+                <img onclick="toggleMobileMenu()" aria-hidden="true" focusable="false" src="./img/icons/bars-solid.svg"></img>
+                <img onclick="toggleMobileMenu()" class="mobile-hidden" aria-hidden="true" focusable="false" src="./img/icons/bars-staggered-solid.svg"></img>
+            </div>
             <nav class="nav-links">
                 <a href="./index.html">Start</a>
                 <a href="./rezept_des_tages.html">Rezept des Tages</a>
@@ -34,6 +41,14 @@
             </nav>
         </section>
     </header>
+    <div class="mobile-nav-links">
+        <nav>
+            <a href="./index.html">Start</a>
+            <a href="./rezept_des_tages.html">Rezept des Tages</a>
+            <a href="./kontakt.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </nav>
+    </div>
 
 
 
@@ -192,8 +207,11 @@
 
     <footer>
         <section class="footer">
-            <img class="footer_logo" img src="./img/logo-white.png" alt="LOGO">
-    
+            <picture >
+                <source media="(max-width: 700px)" srcset="./img/logo_small.png"></source>
+                <img class="footer_logo" src="./img/logo-white.png" alt="LOGO">            
+            </picture>
+        
             <div class="impressum_contact">
                 <a href="kontakt.css">Kontakt</a>
                 <a href="impressum.css">Impressum</a>
