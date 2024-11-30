@@ -196,7 +196,8 @@ nav a:hover::after {
 
 .menu img {
     width: 280px;
-    height: 220px;
+    height: unset;
+    aspect-ratio: 1;
     border-radius: 12px;
 }
 
@@ -285,7 +286,8 @@ nav a:hover::after {
 @media (max-width: 1600px) {
     .menu img {
         width: 180px;
-        height: 120px;
+        height: unset;
+        aspect-ratio: 1;
     }    
 }
 
