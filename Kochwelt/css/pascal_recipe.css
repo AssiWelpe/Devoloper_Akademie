@@ -49,8 +49,6 @@
 .meta-icon {
     width: 20px;
     height: 20px;
-    background-image: url('./img/icon-clock.png');
-    background-position: center;
 }
 
 .portion-control {
@@ -157,9 +155,6 @@
 
 .profile-image {
     width: 90px;
-    background-image: url('./img/user.jpg');
-    background-size: cover;
-    background-position: center;
     border-radius: 50%;
     margin-right: 20px;
 }
