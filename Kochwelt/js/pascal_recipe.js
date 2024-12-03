@@ -60,7 +60,7 @@ function equal(x, y) {
     } else if (equal(fraction, 0.75)) {
       output += " ¾";
     } else if (equal(fraction, 0)) {}else {
-      if (full_part == 0) {
+      if (full_part === 0) {
          output += '${fraction.toFixed(2)}';
        } else {output += `.${fraction.toFixed(2).substring(2)}`;
      } 

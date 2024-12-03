@@ -1,11 +1,109 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/adrians_rezept.css">
+    <link rel="stylesheet" href="./css/kontakt.css">
+   
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Viga&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        .contact-form{
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;
+            width: 50%;
+            min-width: 200px;
+            gap: 8px;
+            padding: 24px;
+            border: 0;
+            background-color: #DCDCDC;
+            border-radius: 2%;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <section class="main-head">
     
-</body>
-</html>
+            <div class="logo-head">
+                <img src="./img/logo.png" alt="Logo">
+            </div>
+    
+            <nav class="nav-links">
+                <a href="./index.html">Start</a>
+                <a href="./rezept_des_tages.html">Rezept des Tages</a>
+                <a href="./kontakt.html">Kontakt</a>
+                <a href="./impressum.html">Impressum</a>
+            </nav>
+        </section>
+    </header>
+
+
+    <main class="main_container">¨
+
+        <form class="contact-form">
+            <h2>Kontaktiere uns</h2>
+            <div class="form_label">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="rounded-input" required autofocus>
+            </div>
+            <div class="form_label">
+                <label for="e-mail">E-Mail</label>
+                <input type="email" name="email" id="email" class="rounded-input" required autofocus>
+            </div>
+
+            <div class="form_label">
+                <label for="message">Ihre Nachricht</label>
+                <textarea name="message" id="message" class="rounded-input" required rows="6" cols="50"></textarea>
+            </div>
+            <div class="datenschutz">
+                <input type="checkbox" name="datenschutz" id="datenschutz">
+                <label for="datenschutz">
+                    Sie erklären sich damit einverstanden, dass Ihre Daten zur Bearbeitung Ihres Anliegens verwendet werden. Weitere Informationen und Widerrufshinweise finden Sie in der
+                    <!--Link zur Datenschutzerklärung-->
+                    <a href="">Datenschutzterklärung</a>
+                </label>
+                <button class="send">Abschicken</button>
+            </div>
+        </form>
+    </main>
+
+
+
+
+
+
+
+    <footer>
+        <section class="footer">
+            <img class="footer_logo" img src="./img/logo-white.png" alt="LOGO">
+
+            <div class="impressum_contact">
+                <a href="kontakt.css">Kontakt</a>
+                <a href="impressum.css">Impressum</a>
+            </div>
+
+            <div class="socials">
+
+                <a href="https://www.instagram.com/" target="_blank"><img class="sociallogo"
+                        src="./img/social_icons/Instagram.png"></a>
+
+                <a href="https://de-de.facebook.com/" target="_blank"><img class="sociallogo"
+                        src="./img/social_icons/facebook_logo.png"></a>
+
+                <a href="https://x.com/" target="_blank"><img class="sociallogo"
+                        src="./img/social_icons/Twitter_Icon.png"></a>
+
+            </div>
+
+
+        </section>
+
+    </footer>

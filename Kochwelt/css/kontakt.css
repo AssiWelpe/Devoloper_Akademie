@@ -1,0 +1,9 @@
+.main_container button {
+    padding: 8px 15px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

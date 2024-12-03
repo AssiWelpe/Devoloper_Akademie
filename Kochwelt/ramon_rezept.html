@@ -12,24 +12,27 @@
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="css/pascal_recipe.css">
+    <link rel="stylesheet" href="css/ramon_rezept.css">
 </head>
 
 <body>
 
     <header>
-
         <section class="main-head">
-
+    
             <div class="logo-head">
                 <a href="index.html">
-                    <img src="./img/logo.png">
+                    <picture >
+                        <source media="(max-width: 800px)" srcset="./img/logo_small.png"></source>
+                        <img src="./img/logo.png" alt="LOGO">            
+                    </picture>
                 </a>
             </div>
-               
-            
-
-            <nav>
+            <div class="mobile-button-group">
+                <img onclick="toggleMobileMenu()" aria-hidden="true" focusable="false" src="./img/icons/bars-solid.svg"></img>
+                <img onclick="toggleMobileMenu()" class="mobile-hidden" aria-hidden="true" focusable="false" src="./img/icons/bars-staggered-solid.svg"></img>
+            </div>
+            <nav class="nav-links">
                 <a href="./index.html">Start</a>
                 <a href="./rezept_des_tages.html">Rezept des Tages</a>
                 <a href="./kontakt.html">Kontakt</a>
@@ -37,6 +40,14 @@
             </nav>
         </section>
     </header>
+    <div class="mobile-nav-links">
+        <nav>
+            <a href="./index.html">Start</a>
+            <a href="./rezept_des_tages.html">Rezept des Tages</a>
+            <a href="./kontakt.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </nav>
+    </div>
 
 
 
@@ -74,7 +85,7 @@
         <!-- Portion Control -->
         <section class="portion-control">
             <label for="portions">Anzahl der Portionen:</label>
-            <input type="number" id="portionInput" value="4" min="1" max="8">
+            <input type="number" id="portionInput" value="4" min="1" max="20">
             <button onclick="updateRecipe()">Portionen</button>
         </section>
 
@@ -90,313 +101,324 @@
                         <td class="ingredients-header">Nougat-Mousse</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="250" data-text="250g" class="ingredient-quantity">250g</td>
+                        <td data-base="250" data-text="g" class="ingredient-quantity">250g</td>
                         <td>Milch</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="125" data-text="125g" class="ingredient-quantity">125g</td>
+                        <td data-base="125" data-text="g" class="ingredient-quantity">125g</td>
                         <td>Nougat</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="150" data-text="150g" class="ingredient-quantity">150g</td>
+                        <td data-base="150" data-text="g" class="ingredient-quantity">150g</td>
                         <td>Milchschokolade</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="425" data-text="425g" class="ingredient-quantity">425g</td>
+                        <td data-base="425" data-text="g" class="ingredient-quantity">425g</td>
                         <td>Rahm</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="25" data-text="25g" class="ingredient-quantity">25g</td>
+                        <td data-base="25" data-text="g" class="ingredient-quantity">25g</td>
                         <td>Amaretto</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="3" data-text="3 Blatt" class="ingredient-quantity">3 Blatt</td>
+                        <td data-base="3" data-text="Blatt" class="ingredient-quantity">3 Blatt</td>
                         <td>Gelatine</td>
                     </tr>
-                    <br>
+                </tbody>
 
                 <!-- Zutaten Passion-Kalamansi-Sorbet -->
+                <tbody>
                     <tr>
                         <td class="ingredients-header">Passion-Kalamansi-Sorbet</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="500" data-text="500g" class="ingredient-quantity">500g</td>
+                        <td data-base="500" data-text="g" class="ingredient-quantity">500g</td>
                         <td>Passion-Pulp (Boiron)</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="500" data-text="500g" class="ingredient-quantity">500g</td>
+                        <td data-base="500" data-text="g" class="ingredient-quantity">500g</td>
                         <td>Kalamansi-Pulp (Boiron)</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="100" data-text="100" class="ingredient-quantity">100g</td>
+                        <td data-base="100" data-text="g" class="ingredient-quantity">100g</td>
                         <td>Glucose</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="200" data-text="200g" class="ingredient-quantity">200g</td>
+                        <td data-base="200" data-text="g" class="ingredient-quantity">200g</td>
                         <td>Zucker</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="1" data-text="1 Blatt" class="ingredient-quantity">1 Blatt</td>
+                        <td data-base="1" data-text="Blatt" class="ingredient-quantity">1 Blatt</td>
                         <td>Gelatine</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="0" data-text="" class="ingredient-quantity"></td>
+                        <td data-base="" data-text="" class="ingredient-quantity"></td>
                         <td>Zimt, Vanille-Schote, Kardamom grün</td>
                     </tr>
+                </tbody>
 
                 <!-- Zutaten Kalamansi-Creme -->
+                <tbody>
                     <tr>
                         <td class="ingredients-header">Kalamansi-Creme</td>
-                    </tr>
+                    </tr>                    
                     <tr class="ingredient-item">
-                        <td data-base="500" data-text="500g" class="ingredient-quantity">500g</td>
-                        <td>Passion-Pulp (Boiron)</td>
-                    </tr>
-                    <tr class="ingredient-item">
-                        <td data-base="500" data-text="500g" class="ingredient-quantity">500g</td>
+                        <td data-base="200" data-text="g" class="ingredient-quantity">200g</td>
                         <td>Kalamansi-Pulp (Boiron)</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="100" data-text="100" class="ingredient-quantity">100g</td>
-                        <td>Glucose</td>
-                    </tr>
+                        <td data-base="100" data-text="g" class="ingredient-quantity">100g</td>
+                        <td>Orangensaft</td>
+                    </tr>                    
                     <tr class="ingredient-item">
-                        <td data-base="200" data-text="200g" class="ingredient-quantity">200g</td>
+                        <td data-base="160" data-text="g" class="ingredient-quantity">160g</td>
                         <td>Zucker</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="1" data-text="1 Blatt" class="ingredient-quantity">1 Blatt</td>
-                        <td>Gelatine</td>
+                        <td data-base="240" data-text="g" class="ingredient-quantity">240g</td>
+                        <td>Vollei</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="0" data-text="" class="ingredient-quantity"></td>
-                        <td>Zimt, Vanille-Schote, Kardamom grün</td>
+                        <td data-base="160" data-text="g" class="ingredient-quantity">160g</td>
+                        <td>Eigelb</td>
                     </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="200" data-text="g" class="ingredient-quantity">200g</td>
+                        <td>Butter</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="6" data-text="g" class="ingredient-quantity">6g</td>
+                        <td>Gelatine</td>
+                    </tr>
+                </tbody>
 
                 <!-- Zutaten Cassis-Sorbet -->
+                <tbody>
                     <tr>
                         <td class="ingredients-header">Cassis-Sorbet</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="500" data-text="500g" class="ingredient-quantity">500g</td>
-                        <td>Passion-Pulp (Boiron)</td>
+                        <td data-base="1000" data-text="g" class="ingredient-quantity">1000g</td>
+                        <td>Cassis-Pulp (Boiron)</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="500" data-text="500g" class="ingredient-quantity">500g</td>
-                        <td>Kalamansi-Pulp (Boiron)</td>
-                    </tr>
-                    <tr class="ingredient-item">
-                        <td data-base="100" data-text="100" class="ingredient-quantity">100g</td>
+                        <td data-base="100" data-text="g" class="ingredient-quantity">100g</td>
                         <td>Glucose</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="200" data-text="200g" class="ingredient-quantity">200g</td>
+                        <td data-base="200" data-text="g" class="ingredient-quantity">200g</td>
                         <td>Zucker</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="1" data-text="1 Blatt" class="ingredient-quantity">1 Blatt</td>
+                        <td data-base="1" data-text="Blatt" class="ingredient-quantity">1 Blatt</td>
                         <td>Gelatine</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="0" data-text="" class="ingredient-quantity"></td>
-                        <td>Zimt, Vanille-Schote, Kardamom grün</td>
+                        <td data-base="" data-text="" class="ingredient-quantity"></td>
+                        <td>Vanille-Schote, Zitronen-Zeste, 1 Schluck Gin</td>
                     </tr>
+                </tbody>
 
                 <!-- Zutaten Joghurt-Limonen-Mousse -->
+                <tbody>
                     <tr>
                         <td class="ingredients-header">Joghurt-Limonen-Mousse</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="500" data-text="500g" class="ingredient-quantity">500g</td>
-                        <td>Passion-Pulp (Boiron)</td>
+                        <td data-base="750" data-text="g" class="ingredient-quantity">750g</td>
+                        <td>Joghurt</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="500" data-text="500g" class="ingredient-quantity">500g</td>
-                        <td>Kalamansi-Pulp (Boiron)</td>
-                    </tr>
-                    <tr class="ingredient-item">
-                        <td data-base="100" data-text="100" class="ingredient-quantity">100g</td>
-                        <td>Glucose</td>
-                    </tr>
-                    <tr class="ingredient-item">
-                        <td data-base="200" data-text="200g" class="ingredient-quantity">200g</td>
+                        <td data-base="200" data-text="g" class="ingredient-quantity">200g</td>
                         <td>Zucker</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="1" data-text="1 Blatt" class="ingredient-quantity">1 Blatt</td>
+                        <td data-base="6" data-text="" class="ingredient-quantity">6g</td>
+                        <td>Limetten</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="18" data-text="g" class="ingredient-quantity">18g</td>
                         <td>Gelatine</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="0" data-text="" class="ingredient-quantity"></td>
-                        <td>Zimt, Vanille-Schote, Kardamom grün</td>
+                        <td data-base="750" data-text="g" class="ingredient-quantity">750g</td>
+                        <td>Rahm</td>
                     </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="" data-text="" class="ingredient-quantity"></td>
+                        <td>Vanille-Schote</td>
+                    </tr>
+                </tbody>
 
                 <!-- Zutaten Himbeer-Gestein -->
+                <tbody>
                     <tr>
                         <td class="ingredients-header">Himbeer-Gestein</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="500" data-text="500g" class="ingredient-quantity">500g</td>
-                        <td>Passion-Pulp (Boiron)</td>
-                    </tr>
-                    <tr class="ingredient-item">
-                        <td data-base="500" data-text="500g" class="ingredient-quantity">500g</td>
-                        <td>Kalamansi-Pulp (Boiron)</td>
-                    </tr>
-                    <tr class="ingredient-item">
-                        <td data-base="100" data-text="100" class="ingredient-quantity">100g</td>
-                        <td>Glucose</td>
-                    </tr>
-                    <tr class="ingredient-item">
-                        <td data-base="200" data-text="200g" class="ingredient-quantity">200g</td>
+                        <td data-base="125" data-text="g" class="ingredient-quantity">125g</td>
                         <td>Zucker</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="1" data-text="1 Blatt" class="ingredient-quantity">1 Blatt</td>
-                        <td>Gelatine</td>
+                        <td data-base="50" data-text="g" class="ingredient-quantity">50g</td>
+                        <td>Wasser</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="0" data-text="" class="ingredient-quantity"></td>
-                        <td>Zimt, Vanille-Schote, Kardamom grün</td>
+                        <td data-base="25" data-text="g" class="ingredient-quantity">25g</td>
+                        <td>Fizzy (texturas)</td>
                     </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="5" data-text="g" class="ingredient-quantity">5g</td>
+                        <td>gefriergetrocknete Himbeeren</td>
+                    </tr>
+                </tbody>
 
                 <!-- Zutaten Pistazien-Sponge -->
+                 <tbody>
                     <tr>
                         <td class="ingredients-header">Pistazien-Sponge</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="125" data-text="125g" class="ingredient-quantity">125g</td>
+                        <td data-base="125" data-text="g" class="ingredient-quantity">125g</td>
                         <td>Eiweiß</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="80" data-text="80g" class="ingredient-quantity">80g</td>
+                        <td data-base="80" data-text="g" class="ingredient-quantity">80g</td>
                         <td>Zucker</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="80" data-text="80g" class="ingredient-quantity">80g</td>
+                        <td data-base="80" data-text="g" class="ingredient-quantity">80g</td>
                         <td>Pistazien</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="80" data-text="80g" class="ingredient-quantity">80g</td>
+                        <td data-base="80" data-text="g" class="ingredient-quantity">80g</td>
                         <td>Eigelb</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="10" data-text="10g" class="ingredient-quantity">10g</td>
+                        <td data-base="10" data-text="g" class="ingredient-quantity">10g</td>
                         <td>Mehl</td>
                     </tr>
+                </tbody>
 
                 <!-- Zutaten Kirsch-Sorbet -->
+                <tbody>
                     <tr>
                         <td class="ingredients-header">Kirsch-Sorbet</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="1000" data-text="1000g" class="ingredient-quantity">1000g</td>
+                        <td data-base="1000" data-text="g" class="ingredient-quantity">1000g</td>
                         <td>Kirsch-Pulp (Boiron)</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="200" data-text="200g" class="ingredient-quantity">200g</td>
+                        <td data-base="200" data-text="g" class="ingredient-quantity">200g</td>
                         <td>Zucker</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="100" data-text="100" class="ingredient-quantity">100g</td>
+                        <td data-base="100" data-text="g" class="ingredient-quantity">100g</td>
                         <td>Glucose</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="1" data-text="1 Blatt" class="ingredient-quantity">1 Blatt</td>
+                        <td data-base="1" data-text="Blatt" class="ingredient-quantity">1 Blatt</td>
                         <td>Gelatine</td>
                     </tr>
+                </tbody>
 
                 <!-- Zutaten Marinierte Kirschen -->
+                <tbody>
                     <tr>
                         <td class="ingredients-header">Marinierte Kirschen</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="100" data-text="100g" class="ingredient-quantity">100g</td>
+                        <td data-base="100" data-text="g" class="ingredient-quantity">100g</td>
                         <td>Kirschen entkernt/ halbiert</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="25" data-text="25g" class="ingredient-quantity">25g</td>
+                        <td data-base="25" data-text="g" class="ingredient-quantity">25g</td>
                         <td>Zucker</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="10" data-text="10g" class="ingredient-quantity">10g</td>
+                        <td data-base="10" data-text="g" class="ingredient-quantity">10g</td>
                         <td>Kirschschnaps</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="0" data-text="" class="ingredient-quantity"></td>
+                        <td data-base="" data-text="" class="ingredient-quantity"></td>
                         <td>Zimtstange, Vanille-Schote</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="1" data-text="1" class="ingredient-quantity">1</td>
+                        <td data-base="1" data-text="" class="ingredient-quantity">1</td>
                         <td>Limette, Saft und Zeste</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="10" data-text="10g" class="ingredient-quantity">10g</td>
+                        <td data-base="10" data-text="g" class="ingredient-quantity">10g</td>
                         <td>Kirschschnaps</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="2" data-text="2" class="ingredient-quantity">2</td>
+                        <td data-base="2" data-text="" class="ingredient-quantity">2</td>
                         <td>Limetten, Saft und Zeste</td>
                     </tr>
+                </tbody>
 
                 <!-- Zutaten Quark-Kirsch-Köpfchen -->
+                <tbody>
                     <tr>
                         <td class="ingredients-header">Quark-Kirsch-Köpfchen</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="500" data-text="500g" class="ingredient-quantity">500g</td>
+                        <td data-base="500" data-text="g" class="ingredient-quantity">500g</td>
                         <td>Rahmquark</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="100" data-text="100" class="ingredient-quantity">100g</td>
+                        <td data-base="100" data-text="g" class="ingredient-quantity">100g</td>
                         <td>Zucker</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="1" data-text="je 1" class="ingredient-quantity">je 1</td>
+                        <td data-text="je" data-base="1" class="ingredient-quantity">je 1</td>
                         <td>Orange und Zitrone, Saft und Zeste</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="20" data-text="20g" class="ingredient-quantity">20g</td>
+                        <td data-base="20" data-text="g" class="ingredient-quantity">20g</td>
                         <td>Kirschschnaps</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="3" data-text="3 Blatt" class="ingredient-quantity">3 Blatt</td>
+                        <td data-base="3" data-text="Blatt" class="ingredient-quantity">3 Blatt</td>
                         <td>Gelatine</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="500" data-text="500g" class="ingredient-quantity">500g</td>
+                        <td data-base="500" data-text="g" class="ingredient-quantity">500g</td>
                         <td>Rahm</td>
                     </tr>
+                </tbody>
 
                 <!-- Zutaten Glanzglasur -->
+                <tbody>
                     <tr>
                         <td class="ingredients-header">Glanzglasur</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="100" data-text="100ml" class="ingredient-quantity">100ml</td>
+                        <td data-base="100" data-text="ml" class="ingredient-quantity">100ml</td>
                         <td>Wasser</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="170" data-text="170g" class="ingredient-quantity">170g</td>
+                        <td data-base="170" data-text="g" class="ingredient-quantity">170g</td>
                         <td>Zucker</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="75" data-text="75g" class="ingredient-quantity">75g</td>
+                        <td data-base="75" data-text="g" class="ingredient-quantity">75g</td>
                         <td>Kakaopulver</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="90" data-text="90g" class="ingredient-quantity">90g</td>
+                        <td data-base="90" data-text="g" class="ingredient-quantity">90g</td>
                         <td>Rahm</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td data-base="12" data-text="12g" class="ingredient-quantity">12g</td>
+                        <td data-base="12" data-text="g" class="ingredient-quantity">12g</td>
                         <td>Gelatine</td>
                     </tr>
                 </tbody>
             </table>
         
 
-        <script src="js/pascal_recipe.js"></script>
+        <script src="js/ramon_rezept.js"></script>
         </section>
 
 
@@ -610,7 +632,7 @@
 
                 <div class="profile-info">
 
-                    <img class="profile-image" src="./img/pascallogo.png" alt="Team Member">
+                    <img class="profile-image" src="./img/profile.png" alt="Team Member">
 
                     <div>Ramon Martin</div>
 
