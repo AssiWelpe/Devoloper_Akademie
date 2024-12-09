@@ -1,38 +1,70 @@
+addEventListener("load", updateRecipe);
 function updateRecipe() {
-  // Die Portionsgröße aus dem Eingabefeld abrufen
-  const portionSize = parseFloat(document.getElementById("portionInput").value);
 
-  // Eingabe überprüfen
-  if (isNaN(portionSize) || portionSize < 1) {
-      alert("Bitte geben Sie eine gültige Portionsgröße ein (mindestens 1).");
-      return;
-  }
+    const portionSize = parseFloat(document.getElementById("portionInput").value);
 
-  // Die Rezept-Tabelle abrufen
-  const table = document.getElementById("recipeTable");
 
-  // Alle Zeilen im Tabellenkörper durchgehen
-  const rows = table.querySelectorAll("tbody tr");
-  rows.forEach((row) => {
-      const element = row.querySelector("td[data-base]");
-      // Basiswert und Textbeschreibung abrufen
-      const baseAmount = parseFloat(element.dataset.base);
-      const text = element.dataset.text;
+    if (isNaN(portionSize) || portionSize < 1) {
+        alert("Bitte geben Sie eine gültige Portionsgröße ein (mindestens 1).");
+        return;
+    }
 
-      // Prüfen, ob die Zutat eine numerische Basis hat
-      if (!isNaN(baseAmount) && baseAmount > 0) {
-          // Neue Menge berechnen
-          const newAmount = baseAmount * portionSize;
 
-          // Die Zelle mit der neuen Menge aktualisieren
-          if (text) {
-              element.innerText = `${newAmount} ${text}`;
-          } else {
-              element.innerText = `${newAmount}`;
-          }
-      } else if (text) {
-          // Wenn es keine numerische Basis gibt, den Text beibehalten (z. B. "etwas", "nach Geschmack")
-          element.innerText = text;
-      }
-  });
+    const table = document.getElementById("recipeTable");
+
+
+    const rows = table.querySelectorAll("tbody tr");
+    rows.forEach((row) => {
+        const element = row.querySelector("td[data-base]");
+
+        const baseAmount = parseFloat(element.dataset.base);
+        const text = element.dataset.text;
+
+        if (!isNaN(baseAmount) && baseAmount > 0) {
+
+            const newAmount = baseAmount * portionSize;
+
+
+            if (text) {
+                element.innerText = `${newAmount} ${text}`;
+                element.innerText = `${formatAsFraction(newAmount)} ${text ? text : ""}`;
+            } else {
+                element.innerText = `${newAmount}`;
+                element.innerText = `${formatAsFraction(newAmount)}`;
+            }
+        } else if (text) {
+
+            element.innerText = text;
+        }
+
+
+    });
 }
+
+function equal(x, y) {
+    return Math.abs(x - y) < Number.EPSILON;
+  }
+  
+  function formatAsFraction(amount) {
+    let full_part = Math.trunc(amount);
+    let fraction = amount - full_part;
+    let output = "";
+    if (full_part > 0) {
+      output = `${full_part}`;
+    }
+  
+    if (equal(fraction, 0.25)) {
+      output += " ¼";
+    } else if (equal(fraction, 0.5)) {
+      output += " ½";
+    } else if (equal(fraction, 0.75)) {
+      output += " ¾";
+    } else if (equal(fraction, 0)) {}else {
+      if (full_part == 0) {
+         output += '${fraction.toFixed(2)}';
+       } else {output += `.${fraction.toFixed(2).substring(2)}`;
+     } 
+    }
+    
+    return output;
+  }

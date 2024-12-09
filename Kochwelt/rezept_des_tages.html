@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kochwelt</title>
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="css/rezept_des_tages.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Viga&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/rezept_des_tages.css">
     <script src="./js/script.js"></script>
     <script src="./js/rezept-des-tages.js"></script>
 </head>
@@ -24,14 +24,14 @@
             <div class="logo-head">
                 <a href="index.html">
                     <picture >
-                        <source media="(max-width: 800px)" srcset="./img/logo_small.png">
+                        <source media="(max-width: 800px)" srcset="./img/logo_small.png"></source>
                         <img src="./img/logo.png" alt="LOGO">            
                     </picture>
                 </a>
             </div>
             <div class="mobile-button-group">
-                <img onclick="toggleMobileMenu()" aria-hidden="true" focusable="false" src="./img/icons/bars-solid.svg" alt="">
-                <img onclick="toggleMobileMenu()" class="mobile-hidden" aria-hidden="true" focusable="false" src="./img/icons/bars-staggered-solid.svg" alt="">
+                <img onclick="toggleMobileMenu()" aria-hidden="true" focusable="false" src="./img/icons/bars-solid.svg"></img>
+                <img onclick="toggleMobileMenu()" class="mobile-hidden" aria-hidden="true" focusable="false" src="./img/icons/bars-staggered-solid.svg"></img>
             </div>
             <nav class="nav-links">
                 <a href="./index.html">Start</a>
@@ -55,7 +55,7 @@
 
     <main class="container">
 
-        <h1 class="recipe-title">4-Gänge-Menü</h1>
+        <h1 class="recipe-title">4 Gänge Menü</h1>
 
 
         <img class="recipe-image" src="./img/4gang.webp" alt="4gang">
@@ -84,17 +84,18 @@
         <div class="border"></div>
 
         <section>
-            <select onchange="recipeSelector()" id="recipe-selector">
+            <select class="button-selector" onchange="recipeSelector()" id="recipe-selector">
                 <option>Gang Auswahl</option>
                 <option>Salat</option>
                 <option>Vorspeise</option>
                 <option>Hauptgang</option>
                 <option>Nachtisch</option>
             </select>
+
             <div id="recipe-content">
                 <div class="recipe-0"><a href='#'></a></div>
                 <div class="recipe-1"><a href="./danny_rezept.html">
-                    <img src="./img/wintersalat.jpg" alt=""></a>
+                    <img src="./img/wintersalat.jpg"></a>
                     <div class="recipe-content-text">
                         <h3>Wintersalat</h3>
                         <p>
@@ -109,7 +110,7 @@
                     </div>    
                 </div>
                 <div class="recipe-2"><a href="./pascal_recipe.html">
-                    <img src="./img/wintersuppe.webp" alt=""></a>
+                    <img src="./img/wintersuppe.webp"></a>
                     <div class="recipe-content-text">
                         <h3>Wintersuppe</h3>
                         <p>
@@ -122,7 +123,7 @@
                     </div>    
                 </div>
                 <div class="recipe-3"><a href="./adrians_rezept.html">
-                    <img src="./img/Entenbrust.png" alt=""></a>
+                    <img src="./img/Entenbrust.png"></a>
                     <div class="recipe-content-text">
                         <h3>Entenbrust mit Honig und Senf</h3>
                         <p>
@@ -138,7 +139,7 @@
                     </div>    
                 </div>
                 <div class="recipe-4"><a href="./ramon_rezept.html">
-                    <img src="./img/nougat-kalamansi.png" alt=""></a>
+                    <img src="./img/nougat-kalamansi.png"></a>
                     <div class="recipe-content-text">
                         <h3>Nougatmousse mit Kalamansi-Sorbet</h3>
                         <p>
@@ -213,22 +214,22 @@
     <footer>
         <section class="footer">
             <picture >
-                <source media="(max-width: 700px)" srcset="./img/logo_small.png">
+                <source media="(max-width: 700px)" srcset="./img/logo_small.png"></source>
                 <img class="footer_logo" src="./img/logo-white.png" alt="LOGO">            
             </picture>
         
             <div class="impressum_contact">
-                <a href="kontakt.html">Kontakt</a>
-                <a href="impressum.html">Impressum</a>
+                <a href="kontakt.css">Kontakt</a>
+                <a href="impressum.css">Impressum</a>
             </div>
     
             <div class="socials">
                 
-                <a href="https://www.instagram.com/" target="_blank"><img class="sociallogo" src="./img/social_icons/Instagram.png" alt=""></a>
+                <a href="https://www.instagram.com/" target="_blank"><img class="sociallogo" src="./img/social_icons/Instagram.png"></a>
     
-                <a href="https://de-de.facebook.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/facebook_logo.png" alt=""></a>
+                <a href="https://de-de.facebook.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/facebook_logo.png"></a>
     
-                <a href="https://x.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/Twitter_Icon.png" alt=""></a>
+                <a href="https://x.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/Twitter_Icon.png" ></a>
     
             </div>
     

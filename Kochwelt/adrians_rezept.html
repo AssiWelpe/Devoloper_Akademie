@@ -13,16 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
-                .recept_image {
-            width: 100%;
-            height: 300px;
-            background-image: url('./img/Entenbrust.png');
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            margin-bottom: 20px;
 
-            }     
     </style>
 </head>
 <body>
@@ -44,11 +35,11 @@
 
     <main class="main_container">
 
-        <h1 class="recept_title">Entenbrust mit Honig und Senf</h1>
+        <h1 class="recept-title">Entenbrust à L`Orange</h1>
 
-        <div class="recept_image"></div>
+        <img src="/img/Entenbrust.png" alt="Entenbrust">
 
-        <div class="recipe-meta">
+        <section class="recipe-meta">
             <div class="meta-item">
 
                 <img src="./img/icons/clock-regular.svg" alt="Uhr" class="meta-icon">
@@ -64,47 +55,62 @@
                 21.11.2024
 
             </div>
-        </div>
+        </section>
         
         <div class="border"></div>
 
 
-        <!-- Portion Control -->
-        <div class="portion-control">
+  
+        <section class="portion-control">
             <label for="portions">Anzahl der Portionen:</label>
-            <input type="number" id="portions" value="1" min="1" max="20">
-            <button>Portionen</button>
-        </div>
+            <input type="number" id="portionInput" value="1" min="1" max="20">
+            <button onclick="updateRecipe()">Portionen</button>
+            <label class="error hidden" for="portionInput" id="updateRecipe"></label>
+        </section>
 
-        <!-- Ingredients -->
-        <div class="ingredients-section">
+        
+        <section class="ingredients-section">
+
             <h2 class="ingredients-title">Zutaten:</h2>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">1 </span> Entenbrust, à ca. 250g
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">1½</span> Orange(n)
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">½ EL</span> Gelee, schwarze Johannisbeere
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">1 EL</span>Grand Marnier
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">10g</span> Butter
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">½ TL</span> Zucker
-            </div>
-            <div class="ingredient-item">
-                <span class="ingredient-quantity">nach bedarf</span> Salz und Pfeffer
-            </div>
+            <table id="recipeTable">
 
+                <tbody>
 
-            </div>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="1">1</td>
+                        <td class="ingredient-text">Entenbrüste,à ca.250g</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="1.5">1.5</td>
+                        <td class="ingredient-text">Orange(n)</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0.5" data-text="EL">0.5 EL</td>
+                        <td class="ingredient-text">Gelee, schwarze Johannisbeere</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="1" data-text="EL">1 EL</td>
+                        <td class="ingredient-text">Grand Marnier</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="10" data-text="g">10g</td>
+                        <td class="ingredient-text">Butter</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0.5" data-text="TL">0.5 TL</td>
+                        <td class="ingredient-text">Zucker</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0">nach belieben</td>
+                        <td class="ingredient-text">Salz und Pfeffer</td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        
 
-        </div>
+        <script src="js/pascal_recipe.js"></script>
+        </section>
 
 
         <section class="preparation-section">

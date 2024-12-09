@@ -1,4 +1,3 @@
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -15,6 +14,7 @@
 .recipe-image {
     width: 100%;
     height: 300px;
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 20px;
     image-rendering: optimizeSpeed;
@@ -25,6 +25,7 @@
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .meta-item {
@@ -84,29 +85,43 @@
 
 .ingredients-section {
     margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ingrediants-table {
+    display: flex;
+    justify-content: space-between;
 }
 
 .ingredients-title {
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .ingredient-item {
     display: flex;
     align-items: center;
     padding: 10px 15px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     border-radius: 5px;
+    width: 100%;
 }
 
-.ingredient-item:nth-child(odd) {
+.ingredients-header {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.ingredient-item:nth-child(even) {
     background-color: #FFFFFF;
     /*  Weißer Hintergrund für ungerade Zeilen */
 }
 
-.ingredient-item:nth-child(even) {
+.ingredient-item:nth-child(odd) {
     background-color: #EAEAEA;
     /* Hellgrauer Hintergrund für gerade Zeilen */
 }
@@ -167,5 +182,7 @@
 .profile-title {
     font-size: 20px;
     margin-bottom: 20px;
-
 }
+
+
+
