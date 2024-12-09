@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/adrians_rezept.css">
     <link rel="stylesheet" href="./css/kontakt.css">
-    <link rel="stylesheet" href="contact_site.css">
-   
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Viga&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-
-
-
-    </style>
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <header>
         <section class="main-head">
-    
+
             <div class="logo-head">
-                <img src="./img/logo.png" alt="Logo">
+                <a href="index.html">
+                    <picture >
+                        <source media="(max-width: 800px)" srcset="./img/logo_small.png">
+                        <img src="./img/logo.png" alt="LOGO">
+                    </picture>
+                </a>
             </div>
-    
+            <div class="mobile-button-group">
+                <img onclick="toggleMobileMenu()" aria-hidden="true"  src="./img/icons/bars-solid.svg" alt="bars-solid">
+                <img onclick="toggleMobileMenu()" class="mobile-hidden" aria-hidden="true"  src="./img/icons/bars-staggered-solid.svg" alt="bars-staggered-solid">
+            </div>
             <nav class="nav-links">
                 <a href="./index.html">Start</a>
                 <a href="./rezept_des_tages.html">Rezept des Tages</a>
@@ -36,9 +37,16 @@
             </nav>
         </section>
     </header>
+    <div class="mobile-nav-links">
+        <nav>
+            <a href="./index.html">Start</a>
+            <a href="./rezept_des_tages.html">Rezept des Tages</a>
+            <a href="./kontakt.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </nav>
+    </div>
 
-
-    <main class="main_container">¨
+    <main class="main_container">
 
         <form class="contact-form">
             <h2>Kontaktiere uns</h2>
@@ -61,35 +69,26 @@
         </form>
     </main>
 
-
-
-
-
-
-
     <footer>
         <section class="footer">
-            <img class="footer_logo" img src="./img/logo-white.png" alt="LOGO">
+            <picture >
+                <source media="(max-width: 700px)" srcset="./img/logo_small.png">
+                <img class="footer_logo" src="./img/logo-white.png" alt="LOGO">
+            </picture>
 
             <div class="impressum_contact">
-                <a href="kontakt.css">Kontakt</a>
-                <a href="impressum.css">Impressum</a>
+                <a href="./kontakt.html">Kontakt</a>
+                <a href="./impressum.html">Impressum</a>
             </div>
 
             <div class="socials">
+                <a href="https://www.instagram.com/" target="_blank"><img class="sociallogo" src="./img/social_icons/Instagram.png" alt="Instagram"></a>
 
-                <a href="https://www.instagram.com/" target="_blank"><img class="sociallogo"
-                        src="./img/social_icons/Instagram.png"></a>
+                <a href="https://de-de.facebook.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/facebook_logo.png" alt="facebook"></a>
 
-                <a href="https://de-de.facebook.com/" target="_blank"><img class="sociallogo"
-                        src="./img/social_icons/facebook_logo.png"></a>
-
-                <a href="https://x.com/" target="_blank"><img class="sociallogo"
-                        src="./img/social_icons/Twitter_Icon.png"></a>
+                <a href="https://x.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/Twitter_Icon.png" alt="Twitter"></a>
 
             </div>
-
-
         </section>
 
     </footer>

@@ -39,11 +39,8 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* position: sticky; */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     top: 0;
-    /* z-index: 1000; */
 }
 
 .logo-head img {
@@ -130,7 +127,6 @@ nav a:hover::after {
     display: flex;
     flex-direction: column;
     float: right;
-    height: 320px;
     margin-right: 5%;
 }
 
@@ -253,7 +249,7 @@ nav a:hover::after {
 .footer_logo{
     height: 75px;
     width: 225px;
-    margin-left: 5%;
+    margin-left: 31%;
 }
 
 
@@ -261,7 +257,7 @@ nav a:hover::after {
 .impressum_contact a {
     color: white;
     text-decoration: none;
-    margin-left:  50px;
+    margin-left: 50px;
 }
 
 
@@ -277,10 +273,6 @@ nav a:hover::after {
     text-decoration: none;
     filter: drop-shadow(0px 0px 10px #c0bfbf);
 }
-
-
-
-
 
 
 

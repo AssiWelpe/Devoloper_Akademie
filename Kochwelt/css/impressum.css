@@ -1,23 +1,20 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-}
 
-main {
-    font-family: 'Raleway', sans-serif; 
-    max-width: 800px; 
-    margin: 20px auto; 
+
+.impressum {
+    font-family: 'Raleway', system-ui;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 30px;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    background-color: rgb(230, 228, 228);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #28a745; 
+    color: #28a745;
 }
 
 h2 {
@@ -30,4 +27,12 @@ p {
     margin-bottom: 10px;
 }
 
+a {
+    text-decoration: none;
+    color: #28a745;
+}
+
+a:hover {
+    color: #218838;
+}
 
