@@ -18,9 +18,8 @@ function countCharacters(val){
     return String(val).length
 }
 
-console.log(formatToCurrency(0.5)); /*0.50€*/
+console.log(formatToCurrency(0.5)); /*0,50€*/
 
 function formatToCurrency(val){
-    let number = val;
-    let n = number.toFixed(2);
+    return val.toFixed(2).replace(".", ",") + "€";
 }
