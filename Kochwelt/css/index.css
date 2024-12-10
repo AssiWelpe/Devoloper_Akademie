@@ -237,36 +237,36 @@ nav a:hover::after {
 
 
 /* Styling Footer */
-
+footer {
+    background-color: #403B3B;
+}
 .footer {
-    width: 100%;
+    margin: 0 5%;
     font-family:"Raleway", system-ui;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #403B3B;}
+    background-color: #403B3B;
+}
 
 .footer_logo{
     height: 75px;
     width: 225px;
-    margin-left: 31%;
 }
 
-
+.impressum_contact {
+    display: flex;
+    gap: 20px;
+}
 
 .impressum_contact a {
     color: white;
     text-decoration: none;
-    margin-left: 50px;
 }
-
 
 .impressum_contact a:hover{
     text-decoration: underline;
     color: white;
-}
-.socials{
-    margin-right: 5%;
 }
 
 .socials a:hover{
@@ -293,11 +293,15 @@ nav a:hover::after {
         flex-wrap: wrap;
         justify-content: center;
     }
-
     .menu {
         margin-bottom: 20px;
     }
+    .recipe-section {
+        flex-direction: column;
+        align-items: center;
+    }
 }
+
 
 .mobile-nav-links {
     overflow-x: hidden;
@@ -328,10 +332,7 @@ nav a:hover::after {
     padding-left: 0.5em;
 }
 @media (max-width: 800px) {
-    .recipe-section {
-        flex-direction: column;
-        align-items: center;
-    }
+
     .recipe-content {
         margin-top: 2em;
         height: unset;

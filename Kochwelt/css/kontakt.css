@@ -6,7 +6,6 @@
     font-family: 'Raleway', sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
@@ -77,4 +76,10 @@
 
 .send:hover {
     background-color: #17a45e;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 }
