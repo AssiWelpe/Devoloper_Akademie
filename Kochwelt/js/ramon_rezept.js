@@ -1,33 +1,42 @@
-function updateRecipe() {
-    // Die Portionsgröße aus dem Eingabefeld abrufen
-    const portionSize = parseFloat(document.getElementById("portionInput").value);
+// Warten, bis der DOM (die HTML-Struktur der Seite) vollständig geladen ist
+document.addEventListener("DOMContentLoaded", () => {
 
-    // Eingabe überprüfen
-    if (isNaN(portionSize) || portionSize < 1) {
-        alert("Bitte geben Sie eine gültige Portionsgröße ein (mindestens 1).");
-        return;
-    }
+    /**
+     * Funktion zum Aktualisieren der Zutaten basierend auf der Anzahl der Portionen
+     */
+    window.updateRecipe = () => {
+        // Zugriff auf das Input-Feld, in dem die Anzahl der Portionen eingegeben wird
+        const portionInput = document.getElementById("portionInput");
 
-    // Die Rezept-Tabelle abrufen
-    const table = document.getElementById("recipeTable");
+        // Den Wert aus dem Input-Feld holen und in eine Zahl umwandeln
+        const newPortions = parseInt(portionInput.value, 10);
 
-    // Alle Zeilen im Tabellenkörper durchgehen
-    const rows = table.querySelectorAll("tbody tr");
-    rows.forEach((row) => {
-        // Basiswert und Textbeschreibung abrufen
-        const baseAmount = parseFloat(row.querySelector("td[data-base]").dataset.base);
-        const text = row.querySelector("td[data-base]").dataset.text;
+        // Validierung: Prüfen, ob die Eingabe gültig ist (eine Zahl und größer als 0)
+        if (!isNaN(newPortions) && newPortions > 0) {
+            // Alle Zutatenmengen auswählen
+            const ingredientItems = document.querySelectorAll(".ingredient-item .ingredient-quantity");
 
-        // Prüfen, ob die Zutat eine numerische Basis hat
-        if (!isNaN(baseAmount) && baseAmount > 0) {
-            // Neue Menge berechnen
-            const newAmount = baseAmount * portionSize;
+            // Jede Zutat durchgehen und die Menge anpassen
+            ingredientItems.forEach(item => {
+                // Ursprüngliche Menge aus dem Attribut 'data-base' abrufen
+                const baseQuantity = parseFloat(item.getAttribute("data-base"));
 
-            // Die Zelle mit der neuen Menge aktualisieren
-            row.querySelector("td[data-base]").innerText = `${newAmount}`;
-        } else if (text) {
-            // Wenn es keine numerische Basis gibt, den Text beibehalten (z. B. "etwas", "nach Geschmack")
-            row.querySelector("td[data-base]").innerText = text;
+                // Die Maßeinheit (z. B. "g", "ml") aus dem Attribut 'data-text' abrufen
+                const unit = item.getAttribute("data-text") || "";
+
+                // Überprüfen, ob die ursprüngliche Menge definiert ist und eine Zahl ist
+                if (!isNaN(baseQuantity)) {
+                    // Neue Menge berechnen: Basismenge auf Basis von 4 Portionen anpassen
+                    const newQuantity = (baseQuantity / 4) * newPortions;
+
+                    // Neue Menge in das HTML-Element schreiben
+                    // `.toFixed(2)` sorgt für 2 Nachkommastellen, `.replace()` entfernt unnötige ".00"
+                    item.textContent = `${newQuantity.toFixed(2).replace(/\.00$/, "")}${unit}`;
+                }
+            });
+        } else {
+            // Fehlermeldung, falls die Eingabe ungültig ist
+            alert("Bitte eine gültige Anzahl von Portionen eingeben!");
         }
-    });
-}
+    };
+});
