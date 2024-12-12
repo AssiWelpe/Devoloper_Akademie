@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kochwelt</title>
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="css/pascal_recipe.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Viga&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/pascal_recipe.css">
     <script src="./js/script.js"></script>
 </head>
 
@@ -23,14 +23,14 @@
             <div class="logo-head">
                 <a href="index.html">
                     <picture >
-                        <source media="(max-width: 800px)" srcset="./img/logo_small.png">
+                        <source media="(max-width: 800px)" srcset="./img/logo_small.png"></source>
                         <img src="./img/logo.png" alt="LOGO">            
                     </picture>
                 </a>
             </div>
             <div class="mobile-button-group">
-                <img onclick="toggleMobileMenu()" aria-hidden="true" focusable="false" src="./img/icons/bars-solid.svg" alt="">
-                <img onclick="toggleMobileMenu()" class="mobile-hidden" aria-hidden="true" focusable="false" src="./img/icons/bars-staggered-solid.svg" alt="">
+                <img onclick="toggleMobileMenu()" aria-hidden="true" focusable="false" src="./img/icons/bars-solid.svg"></img>
+                <img onclick="toggleMobileMenu()" class="mobile-hidden" aria-hidden="true" focusable="false" src="./img/icons/bars-staggered-solid.svg"></img>
             </div>
             <nav class="nav-links">
                 <a href="./index.html">Start</a>
@@ -83,7 +83,7 @@
         <div class="border"></div>
 
         <section class="portion-control">
-            <label>Anzahl der Portionen:</label>
+            <label for="portions">Anzahl der Portionen:</label>
             <input type="number" id="portionInput" value="1" min="1" max="8">
             <button onclick="updateRecipe()">Portionen</button>
         </section>
@@ -112,11 +112,11 @@
                         <td class="ingredient-text">Apfel, fest, säuerlich, geschält, grob gewürfelt</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td class="ingredient-quantity" data-base="0.25" data-text="Liter">0,25 Liter</td>
+                        <td class="ingredient-quantity" data-base="0.25" data-text="Liter">0.25 Liter</td>
                         <td class="ingredient-text">Weißwein oder Apfelwein</td>
                     </tr>
                     <tr class="ingredient-item">
-                        <td class="ingredient-quantity" data-base="0.25" data-text="Liter">0,25 Liter</td>
+                        <td class="ingredient-quantity" data-base="0.25" data-text="Liter">0.25 Liter</td>
                         <td class="ingredient-text">Gemüsebrühe</td>
                     </tr>
                     <tr class="ingredient-item">
@@ -207,22 +207,22 @@
     <footer>
         <section class="footer">
             <picture >
-                <source media="(max-width: 700px)" srcset="./img/logo_small.png">
+                <source media="(max-width: 700px)" srcset="./img/logo_small.png"></source>
                 <img class="footer_logo" src="./img/logo-white.png" alt="LOGO">            
             </picture>
         
             <div class="impressum_contact">
-                <a href="kontakt.html">Kontakt</a>
-                <a href="impressum.html">Impressum</a>
+                <a href="kontakt.css">Kontakt</a>
+                <a href="impressum.css">Impressum</a>
             </div>
     
             <div class="socials">
                 
-                <a href="https://www.instagram.com/" target="_blank"><img class="sociallogo" src="./img/social_icons/Instagram.png" alt=""></a>
+                <a href="https://www.instagram.com/" target="_blank"><img class="sociallogo" src="./img/social_icons/Instagram.png"></a>
     
-                <a href="https://de-de.facebook.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/facebook_logo.png" alt=""></a>
+                <a href="https://de-de.facebook.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/facebook_logo.png"></a>
     
-                <a href="https://x.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/Twitter_Icon.png" alt=""></a>
+                <a href="https://x.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/Twitter_Icon.png" ></a>
     
             </div>
     

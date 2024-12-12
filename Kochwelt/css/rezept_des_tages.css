@@ -17,13 +17,79 @@
 
 
 
-#recipe-content > div img {
+.recipe-1 img {
     width: 280px;
     height: unset;
     aspect-ratio: 1;
     border-radius: 12px;
 }
-#recipe-content > div {
+.recipe-1 {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+}
+.recipe-content-text {
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    height: 320px;
+}
+.recipe-content-text p {
+    padding-top: 15px;
+}
+
+.recipe-2 img {
+    width: 280px;
+    height: unset;
+    aspect-ratio: 1;
+    border-radius: 12px;
+}
+.recipe-2 {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+}
+.recipe-content-text {
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    height: 320px;
+}
+.recipe-content-text p {
+    padding-top: 15px;
+}
+
+.recipe-3 img {
+    width: 280px;
+    height: unset;
+    aspect-ratio: 1;
+    border-radius: 12px;
+}
+.recipe-3 {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+}
+.recipe-content-text {
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    height: 320px;
+}
+.recipe-content-text p {
+    padding-top: 15px;
+}
+
+.recipe-4 img {
+    width: 280px;
+    height: unset;
+    aspect-ratio: 1;
+    border-radius: 12px;
+}
+.recipe-4 {
     padding-top: 1em;
     display: flex;
     flex-direction: row;
@@ -40,8 +106,13 @@
 }
 
 
+
+
+
+
 .container {
-    margin: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .recipe-title {
@@ -54,6 +125,8 @@
 
 .recipe-image {
     width: 100%;
+    height: 300px;
+    aspect-ratio: 1;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -84,26 +157,6 @@
     background-color: rgba(168, 165, 165, 0.2);
     height: 3px;
 }
-
-.button-selector {
-    font-family: "Raleway", system-ui;
-    font-size: 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    padding: 10px 15px;
-    transition: box-shadow 0.3s ease, transform 0.2s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.button-selector option {
-    line-height: 100; 
-  }
-
-.button-selector:hover {
-    transform: scale(1.05);
-    background-color: #EAEAEA;
-  }
-
 
 .meta-icon {
     width: 20px;
@@ -222,6 +275,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    display: flex;
     font-size: 18px;
     margin-bottom: 20px;
 }
@@ -231,15 +285,4 @@
     font-size: 20px;
     margin-bottom: 20px;
 
-}
-
-@media (max-width: 900px) {
-    #recipe-content > div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .recipe-content-text {
-        height: unset;
-    }
 }
