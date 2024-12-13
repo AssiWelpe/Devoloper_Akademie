@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Viga&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/pascal_recipe.css">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <section class="main-head">
+    
+            <div class="logo-head">
+                <a href="index.html">
+                    <picture >
+                        <source media="(max-width: 800px)" srcset="./img/logo_small.png"></source>
+                        <img src="./img/logo.png" alt="LOGO">            
+                    </picture>
+                </a>
+            </div>
+            <div class="mobile-button-group">
+                <img onclick="toggleMobileMenu()" aria-hidden="true" focusable="false" src="./img/icons/bars-solid.svg"></img>
+                <img onclick="toggleMobileMenu()" class="mobile-hidden" aria-hidden="true" focusable="false" src="./img/icons/bars-staggered-solid.svg"></img>
+            </div>
+            <nav class="nav-links">
+                <a href="./index.html">Start</a>
+                <a href="./rezept_des_tages.html">Rezept des Tages</a>
+                <a href="./kontakt.html">Kontakt</a>
+                <a href="./impressum.html">Impressum</a>
+            </nav>
+        </section>
+    </header>
+    <div class="mobile-nav-links">
+        <nav>
+            <a href="./index.html">Start</a>
+            <a href="./rezept_des_tages.html">Rezept des Tages</a>
+            <a href="./kontakt.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </nav>
+    </div>
+
+
+
+
+    <main class="container">
+
+        <h1 class="recipe-title">Rote Wintersuppe</h1>
+
+
+        <img class="recipe-image" src="./img/wintersuppe.webp" alt="Wintersuppe">
+
+
+        <section class="recipe-meta">
+
+            <div class="meta-item">
+
+                <img src="./img/icons/clock-regular.svg" alt="Uhr" class="meta-icon">
+                20 Min.
+            </div>
+
+            <div class="meta-item">
+                <img src="./img/icons/brain-solid.svg" alt="Schweregrad" class="meta-icon">
+                Simpel
+            </div>
+
+            <div class="meta-item">
+                <img src="./img/icons/calendar-alt-regular.svg" alt="Kalender" class="meta-icon">
+                23.11.2024
+            </div>
+
+        </section>
+
+        <div class="border"></div>
+
+        <section class="portion-control">
+            <label for="portions">Anzahl der Portionen:</label>
+            <input type="number" id="portionInput" value="1" min="1" max="8">
+            <button onclick="updateRecipe()">Portionen</button>
+        </section>
+
+
+        <section class="ingredients-section">
+
+            <h2 class="ingredients-title">Zutaten:</h2>
+            <table class="recipeTable" id="recipeTable">
+
+                <tbody>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0" data-text="etwas">etwas</td>
+                        <td class="ingredient-text">Butter</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0.5">0.5</td>
+                        <td class="ingredient-text">Zwiebel(n), klein gewürfelt</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0.25">0.25</td>
+                        <td class="ingredient-text">Ingwer, geschält, fein gehackt</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0.25">0.25</td>
+                        <td class="ingredient-text">Apfel, fest, säuerlich, geschält, grob gewürfelt</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0.25" data-text="Liter">0.25 Liter</td>
+                        <td class="ingredient-text">Weißwein oder Apfelwein</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0.25" data-text="Liter">0.25 Liter</td>
+                        <td class="ingredient-text">Gemüsebrühe</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0.5">0.5</td>
+                        <td class="ingredient-text">Rote Bete, geschält, gewürfelt</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0.5">0.5</td>
+                        <td class="ingredient-text">Kartoffel(n), klein, geschält, gewürfelt</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0" data-text="etwas">etwas</td>
+                        <td class="ingredient-text">Salz und Pfeffer</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0.25" data-text="Spritzer">0.25 Spritzer</td>
+                        <td class="ingredient-text">Worcestershiresauce</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="1" data-text="TL">1 TL</td>
+                        <td class="ingredient-text">Schmand</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td class="ingredient-quantity" data-base="0" data-text="etwas">etwas</td>
+                        <td class="ingredient-text" >Frische Kräuter</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+
+        <script src="./js/pascal_recipe.js"></script>
+        </section>
+
+
+
+
+        <section class="preparation-section">
+
+            <h2 class="ingredients-title">Zubereitung:</h2>
+
+            <div class="meta-item-preparation">
+                <img src="./img/icons/clock-regular.svg" alt="Uhr" class="meta-icon">
+                Gesamtzeit: 20 Minuten
+            </div>
+
+            
+
+        </section>
+
+        <section class="ingredients-text">
+
+            <p>
+                Die Zwiebeln in Butter anschwitzen. Ingwer- und Apfelwürfel zugeben, kurz mitschwitzen und mit dem Wein ablöschen. 
+                Die Brühe zugießen und zum Kochen bringen. Rote Bete und Kartoffeln zugeben, aufkochen, die Hitze reduzieren, zudecken und ca. 15-20 Minuten köcheln lassen. 
+                Pürieren, abschmecken und zum Kochen bringen. Den Schmand zugeben, garnieren und genießen.
+                Tipp: Rote Bete kann vorgegart (dann aber noch fest) oder frische Knolle sein. 
+                Die besten Erfahrungen habe ich mit selbst halbgar gekochter Roter Bete gemacht, dann ist das Schälen und Schneiden sauberer. 
+                Kartoffeln sorgen für die Konsistenz und auch dafür, dass die Farbe nicht so stechend blutig wirkt.
+            </p>
+
+        </section>
+
+  
+
+        <section class="profile">
+            <div>
+
+                <h2 class="profile-title">Rezept erstellt von</h2>
+
+                <div class="profile-info">
+
+                    <img class="profile-image" src="./img/pascallogo.png" alt="Team Member">
+
+                    <div>Pascal Gröger</div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+   
+
+
+
+    </main>
+
+    <footer>
+        <section class="footer">
+            <picture >
+                <source media="(max-width: 700px)" srcset="./img/logo_small.png"></source>
+                <img class="footer_logo" src="./img/logo-white.png" alt="LOGO">            
+            </picture>
+        
+            <div class="impressum_contact">
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+            </div>
+    
+            <div class="socials">
+                
+                <a href="https://www.instagram.com/" target="_blank"><img class="sociallogo" src="./img/social_icons/Instagram.png"></a>
+    
+                <a href="https://de-de.facebook.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/facebook_logo.png"></a>
+    
+                <a href="https://x.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/Twitter_Icon.png" ></a>
+    
+            </div>
+    
+    
+        </section>
+    
+    </footer>
+
+</body>
+
+</html>

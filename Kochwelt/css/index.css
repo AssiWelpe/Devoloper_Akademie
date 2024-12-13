@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Raleway", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+.my-body {
+    margin: 0;
+    font-family: "Raleway", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+.main-head {
+    display: flex;
+
+}
+
+.logo-head {
+    margin-top: 1em;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    top: 0;
+}
+
+.logo-head img {
+    width: 260px; 
+    height: 78px; 
+}
+
+.main-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    padding-top: 60px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+}
+
+nav a:hover {
+    color: #666;
+    text-decoration: none;
+}
+
+/* nav-links transition */
+nav.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 0;
+    /* Startpunkt: Keine Breite */
+    height: 5px;
+    /* Startpunkt: Dicke der Linie */
+    background-color: green;
+    /* Farbe der Linie */
+    transition: width 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Korrektur */
+    transform: translateX(-50%);
+    /* sorgt dafür, dass die Linie mittig ist */
+}
+
+nav a:hover::after {
+    width: 100%;
+    /* Linie füllt sich bei Hover */
+}
+
+.mobile-button-group {
+    display: none;
+}
+
+
+/* section 2 */
+
+.recipe-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    overflow: hidden;
+    padding-top: 4em;
+    margin-left: 5%;
+}
+
+.recipe-section img {
+    width: min(280px, 100%);
+    border-radius: 8px;
+}
+
+
+.recipe-content {
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    margin-right: 5%;
+}
+
+.recipe-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.recipe-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.recipe-description p {
+    gap: 10px;
+}
+
+.recipe-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+}
+
+.recipe-button:hover {
+    background-color: #218838;
+}
+
+/* section-3 */
+
+.section-new-rezipe {
+    background-color: #e3e3e3;
+    background-size: cover;
+    padding-bottom: 15px;
+    margin: 2em 5% 2em;
+}
+
+.title-new-section h2 {
+    padding-top: 1em;
+    text-align: center;
+}
+
+.menu-section {
+    padding: 35px;
+    margin-top: 4em;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu img {
+    width: 280px;
+    height: unset;
+    aspect-ratio: 1;
+    border-radius: 12px;
+}
+
+.menu h3 {
+    text-align: center;
+}
+
+
+.section-info-board {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.info-board {
+    display: flex;
+    flex-direction: row;
+    padding-top: 24px;
+    padding-bottom: 56px;
+    gap: 40px;
+}
+
+.info-board-img-right {
+    width: 280px;
+    aspect-ratio: 1;
+    border-radius: 8px;
+}
+
+.info-board p {
+    line-height: 1.6;
+    color: rgb(119, 125, 135);
+}
+
+
+
+
+
+
+
+
+
+/* Styling Footer */
+footer {
+    background-color: #403B3B;
+
+
+}
+.footer {
+    margin: 0 5%;
+    font-family:"Raleway", system-ui;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #403B3B;
+}
+
+.footer_logo{
+    height: 75px;
+    width: 225px;
+}
+
+.impressum_contact {
+    display: flex;
+    gap: 20px;
+}
+
+.impressum_contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.impressum_contact a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.socials a:hover{
+    text-decoration: none;
+    filter: drop-shadow(0px 0px 10px #c0bfbf);
+}
+
+
+
+@media (max-width: 1600px) {
+    .menu img {
+        width: 180px;
+        height: unset;
+        aspect-ratio: 1;
+    }    
+}
+
+
+
+
+
+@media (max-width: 1250px) {
+    .menu-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu {
+        margin-bottom: 20px;
+    }
+    .recipe-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.mobile-nav-links {
+    overflow-x: hidden;
+    position: absolute;
+    height: 180px;
+    width: 130px;
+    right: 0;
+    pointer-events: none; 
+}
+
+.mobile-nav-links > nav {
+    pointer-events: auto; 
+
+    display: none;
+    flex-direction: column;
+    z-index: 1;
+
+    position: absolute;
+    background-color: white;
+    right: 0;
+    padding-top: 0;
+    border-radius: 0 0 0 5px;
+    transition: transform 250ms ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    gap: 0;
+    justify-content: space-evenly;
+    height: 180px;
+    padding-left: 0.5em;
+}
+@media (max-width: 800px) {
+
+    .recipe-content {
+        margin-top: 2em;
+        height: unset;
+    }
+    .logo-head img {
+        width: unset;
+        aspect-ratio: 1;
+    }
+
+    .mobile-button-group {
+        display: unset;
+    }
+    
+    
+    .mobile-button-group > img{
+        width: 23px;
+        height: 23px;
+    }
+    
+    .mobile-hidden {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-nav-links > nav {
+        display: flex;
+    }
+    .mobile-nav-links > nav:not(.nav-links-open) {
+        transform: translateX(100%);
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer_logo {
+        height: 70px;
+        width: unset;
+        aspect-ratio: 1;
+        filter: invert(1);
+        padding: 10px;
+    }
+    .info-board {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .impressum_contact {
+        display: none;
+    }
+}
