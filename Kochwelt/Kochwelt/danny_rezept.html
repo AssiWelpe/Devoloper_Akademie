@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/danny_rezept.css">
+    <script src="./js/script.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Viga&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <section class="main-head">
+    
+            <div class="logo-head">
+                <a href="index.html">
+                    <picture >
+                        <source media="(max-width: 800px)" srcset="./img/logo_small.png"></source>
+                        <img src="./img/logo.png" alt="LOGO">            
+                    </picture>
+                </a>
+            </div>
+            <div class="mobile-button-group">
+                <img onclick="toggleMobileMenu()" aria-hidden="true" focusable="false" src="./img/icons/bars-solid.svg"></img>
+                <img onclick="toggleMobileMenu()" class="mobile-hidden" aria-hidden="true" focusable="false" src="./img/icons/bars-staggered-solid.svg"></img>
+            </div>
+            <nav class="nav-links">
+                <a href="./index.html">Start</a>
+                <a href="./rezept_des_tages.html">Rezept des Tages</a>
+                <a href="./kontakt.html">Kontakt</a>
+                <a href="./impressum.html">Impressum</a>
+            </nav>
+        </section>
+    </header>
+    <div class="mobile-nav-links">
+        <nav>
+            <a href="./index.html">Start</a>
+            <a href="./rezept_des_tages.html">Rezept des Tages</a>
+            <a href="./kontakt.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+        </nav>
+    </div>
+
+
+
+
+    <main class="container">
+        <!-- Title -->
+        <h1 class="recipe-title">knackiger Wintersalat</h1>
+
+        <!-- Image -->
+        <img class="recipe-image" src="./img/wintersalat.jpg" alt="Wintersalat">
+
+        <!-- Meta Information -->
+        <div class="recipe-meta">
+            <div class="meta-item">
+
+                <img src="./img/icons/clock-regular.svg" alt="Uhr" class="meta-icon">
+                25 Min.
+            </div>
+            <div class="meta-item">
+
+                <img src="./img/icons/brain-solid.svg" alt="Schweregrad" class="meta-icon">
+                Simpel
+            </div>
+            <div class="meta-item">
+                <img src="./img/icons/calendar-alt-regular.svg" alt="Kalender" class="meta-icon">
+                21.11.2024
+
+            </div>
+        </div>
+
+        <div class="border"></div>
+
+        <!-- Portion Control -->
+        <section class="portion-control">
+            <label for="portions">Anzahl der Portionen:</label>
+            <input type="number" id="portionInput" value="1" min="1" max="8">
+            <button onclick="updateRecipe()">Portionen</button>
+        </section>
+
+        <!-- Ingredients -->
+        <section class="ingredients-section">
+
+            <h2 class="ingredients-title">Zutaten:</h2>
+            <table id="recipeTable">
+
+                <tbody>
+                    <tr class="ingredient-item">
+                        <td data-base="62.5 " data-text="g" class="ingredient-quantity">62.5 g</td>
+                        <td>Feldsalat</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.25" class="ingredient-quantity">0.25</td>
+                        <td>Granatapfel</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.5" class="ingredient-quantity">0.5</td>
+                        <td>Orange</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="1" data-text="EL" class="ingredient-quantity">1 EL</td>
+                        <td>Walnusskern</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="20" data-text="g" class="ingredient-quantity">20 g</td>
+                        <td>Ziegenweichkäse</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.25" data-text="EL" class="ingredient-quantity">0.25 EL</td>
+                        <td>Balsamico-Essig (hell)</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.25" data-text="EL" class="ingredient-quantity">0.25 EL</td>
+                        <td>Honig</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.5" data-text="TL" class="ingredient-quantity">0.5 TL</td>
+                        <td>Senf</td>
+                    </tr>
+                    <tr class="ingredient-item">
+                        <td data-base="0.5" data-text="EL" class="ingredient-quantity">0.5 EL</td>
+                        <td>Olivenöl</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <script src="js/danny-rezept.js"></script>
+        </section>
+
+        <section class="preparation-section">
+
+            <h2 class="ingredients-title">Zubereitung:</h2>
+
+            <div class="meta-item-preparation">
+                <img src="./img/icons/clock-regular.svg" alt="Uhr" class="meta-icon">
+                Gesamtzeit: 25 Minuten
+            </div>
+
+
+
+        </section>
+
+        <section class="ingredients-text">
+
+            <p>
+                Feldsalat waschen, und ggf. vom Strunk befreien. Granatapfel halbieren und in
+                einer Schüssel mit Wasser die Kerne aus der Frucht drücken. Dann die Kerne mit dem Wasser durch ein
+                Sieb abschütten und anschließend die weiße Haut entfernen.Orangen schälen, die weiße Haut dabei
+                entfernen. Mit einem scharfen Messer vorsichtig die Filets zwischen den Trennhäuten herauslösen, den
+                heraustretenden Saft dabei auffangen. Walnusskerne in einer beschichteten Pfanne goldbraun rösten
+                und nach dem Abkühlen grob hacken. Ziegenweichkäse in Stücke schneiden.Für das Dressing
+                Balsamico-Essig mit Honig, Senf und 4 EL Orangensaft verrühren, zuletzt das Olivenöl unterschlagen.
+                Mit Pfeffer und etwas Salz würzen.
+
+
+            </p>
+
+        </section>
+
+        <section class="profile">
+            <div>
+
+                <h2 class="profile-title">Rezept erstellt von</h2>
+
+                <div class="profile-info">
+
+                    <img class="profile-image" src="./img/profile.png" alt="Team Member">
+
+                    <div>Danny Hoffmann</div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <section class="footer">
+            <picture >
+                <source media="(max-width: 700px)" srcset="./img/logo_small.png"></source>
+                <img class="footer_logo" src="./img/logo-white.png" alt="LOGO">            
+            </picture>
+        
+            <div class="impressum_contact">
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+            </div>
+    
+            <div class="socials">
+                
+                <a href="https://www.instagram.com/" target="_blank"><img class="sociallogo" src="./img/social_icons/Instagram.png"></a>
+    
+                <a href="https://de-de.facebook.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/facebook_logo.png"></a>
+    
+                <a href="https://x.com/"  target="_blank"><img class="sociallogo"  src="./img/social_icons/Twitter_Icon.png" ></a>
+    
+            </div>   
+        </section>
+    </footer>
+
+</body>
+
+</html>
